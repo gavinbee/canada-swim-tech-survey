@@ -62,6 +62,71 @@ PLATFORMS = {
         "header_patterns": [],
         "category": "Swim-specific",
     },
+    # JerseyWatch – sports club/team management (showed up in ~48 unknown sites)
+    "JerseyWatch": {
+        "url_patterns": [r"jerseywatch\.com"],
+        "text_patterns": [r"jerseywatch"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # TeamLinkt – Canadian league/club management
+    "TeamLinkt": {
+        "url_patterns": [r"teamlinkt\.com"],
+        "text_patterns": [r"teamlinkt"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # Sidearm Sports – university/college athletics platform
+    "Sidearm Sports": {
+        "url_patterns": [r"sidearmsports\.com"],
+        "text_patterns": [r"sidearmsports", r"sidearm\s*sports"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # Presto Sports – another university athletics platform
+    "Presto Sports": {
+        "url_patterns": [r"prestosports\.com"],
+        "text_patterns": [r"prestosports", r"presto\s*sports"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # GoalLine / Stack Sports – Canadian amateur sports web platform
+    "GoalLine (Stack Sports)": {
+        "url_patterns": [r"goalline\.ca", r"stacksports\.com"],
+        "text_patterns": [r"goalline", r"stack\s*sports"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # Jonas Club Software – private-club / recreation-centre management
+    "Jonas Club Software": {
+        "url_patterns": [r"jonasclub\.com", r"jonas\s*software"],
+        "text_patterns": [r"powered by jonas", r"jonas club software"],
+        "header_patterns": [],
+        "category": "Sports management",
+    },
+    # GoDaddy Website Builder (Starfield Technologies)
+    "GoDaddy Website Builder": {
+        "url_patterns": [],
+        "text_patterns": [r"starfield technologies.*go daddy website builder",
+                          r"go daddy website builder",
+                          r"godaddy.*website.*builder"],
+        "header_patterns": [],
+        "category": "CMS / Website builder",
+    },
+    # WebSelf.net – French-Canadian website builder
+    "WebSelf": {
+        "url_patterns": [r"webself\.net"],
+        "text_patterns": [r"webself"],
+        "header_patterns": [],
+        "category": "CMS / Website builder",
+    },
+    # Duda – website builder used by agencies
+    "Duda": {
+        "url_patterns": [r"dudaone\.com", r"duda\.co"],
+        "text_patterns": [r'"builder":"duda"', r"dudaone"],
+        "header_patterns": [r"x-duda-"],
+        "category": "CMS / Website builder",
+    },
     "TeamUnify": {
         "url_patterns": [r"teamunify\.com"],
         "text_patterns": [r"teamunify", r"team\s*unify"],
