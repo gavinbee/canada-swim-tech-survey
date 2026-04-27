@@ -24,6 +24,7 @@ import pandas as pd
 from tqdm import tqdm
 
 from src.clubs import fetch_all_clubs
+from src.classify import reclassify
 from src.detector import detect
 from src.visualize import generate_html
 
@@ -127,6 +128,9 @@ def run(limit=None, use_cache=True, extra_delay=0.0):
     df["software"] = df["software"].fillna("Unknown / Custom")
     df["category"] = df["category"].fillna("Unknown / Custom")
     df["province"] = df["province"].str.upper().str.strip()
+
+    # Post-detection reclassification
+    df = reclassify(df)
 
     generate_html(df, REPORT_HTML)
     log.info("Report → %s", REPORT_HTML)
