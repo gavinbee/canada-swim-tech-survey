@@ -19,8 +19,14 @@ HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0 Safari/537.36"
+        "Chrome/124.0.0.0 Safari/537.36"
     ),
+    # club-list.php is loaded by JS on findaclub.swimming.ca — the server
+    # checks Referer to block direct non-browser requests
+    "Referer": "https://findaclub.swimming.ca/",
+    "Accept": "text/javascript, application/javascript, */*",
+    "Accept-Language": "en-CA,en;q=0.9",
+    "X-Requested-With": "XMLHttpRequest",
 }
 
 CLUB_LIST_URL = "https://www.swimming.ca/club-list.php"
