@@ -15,7 +15,7 @@ Returns one of the known platform keys or "Unknown / Custom" / "No Website".
 import logging
 import re
 import time
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 import warnings
 
@@ -54,6 +54,14 @@ TIMEOUT = 12          # seconds per request
 
 PLATFORMS = {
     # ---- Swim-specific / Canadian-common ----
+    # Commit Swimming — Canadian swim club platform (SPA hosted on Netlify;
+    # detected via manifest.json which declares name "Commit Swimming")
+    "Commit": {
+        "url_patterns": [r"commitswimming\.com"],
+        "text_patterns": [r"commit\s*swimming"],
+        "header_patterns": [],
+        "category": "Swim-specific",
+    },
     # GoMotion is the #1 platform for Canadian clubs (successor to TeamUnify)
     "GoMotion": {
         "url_patterns": [r"gomotionapp\.com"],
@@ -393,6 +401,17 @@ def detect(website_url):
     soup = BeautifulSoup(page_html, "lxml")
     page_urls = _collect_urls_from_soup(soup)
     page_text = page_html  # match against full HTML for generator meta etc.
+
+    # For SPAs the HTML shell is near-empty; fetch manifest.json if present
+    # so platforms like Commit (which declare their name there) are detectable.
+    manifest_tag = soup.find("link", rel="manifest")
+    if manifest_tag and manifest_tag.get("href"):
+        try:
+            manifest_url = urljoin(final_url, manifest_tag["href"])
+            manifest_resp = session.get(manifest_url, headers=HEADERS, timeout=TIMEOUT)
+            page_text += " " + manifest_resp.text
+        except Exception:
+            pass
 
     # Check platform signatures in priority order (swim-specific first)
     for name, sig in _COMPILED.items():

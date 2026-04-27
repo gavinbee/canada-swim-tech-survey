@@ -7,8 +7,7 @@ __pycache__/
 data/clubs_raw.csv
 data/results.csv
 # clubs.json is committed — it's the snapshot used by GitHub Actions
-output/report.html
-output/index.html
-output/RUN_INFO.md
-output/*.json
+output/*
+!output/.gitkeep
+.claude/
 *.log
