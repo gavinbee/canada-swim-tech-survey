@@ -1,0 +1,53 @@
+name: run_survey
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to create releases
+  pages: write      # needed to deploy to GitHub Pages
+  id-token: write   # needed for Pages OIDC authentication
+
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run survey
+        run: python main.py
+
+      # Pages requires an index.html at the root
+      - name: Prepare Pages artifact
+        run: cp output/report.html output/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="survey-$(date -u +'%Y-%m-%d-%H%M')"
+          gh release create "$TAG" \
+            --title "Survey $(date -u +'%B %-d, %Y')" \
+            --notes-file output/RUN_INFO.md \
+            "data/results.csv#Club software dataset (CSV)"

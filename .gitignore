@@ -5,5 +5,9 @@ __pycache__/
 *.pyo
 .env
 data/clubs_raw.csv
+data/results.csv
+output/report.html
+output/index.html
+output/RUN_INFO.md
 output/*.json
 *.log
