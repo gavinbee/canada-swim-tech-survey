@@ -28,6 +28,7 @@ COLOURS = [
 
 # Homepage URLs for each known platform (used to make bar labels clickable)
 PLATFORM_URLS = {
+    "Commit":                   "https://www.commitswimming.com",
     "GoMotion":                 "https://www.gomotionapp.com",
     "PoolQ":                    "https://poolq.net",
     "Amilia":                   "https://www.amilia.com",

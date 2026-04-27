@@ -95,6 +95,23 @@ class TestScriptSrcDetection:
         assert detect("https://example.com")["software"] == "WordPress"
 
 
+class TestManifestDetection:
+    @patch("src.detector._get_session")
+    def test_commit_via_manifest(self, mock_sess):
+        main_html = (
+            '<html><head>'
+            '<link rel="manifest" href="/manifest.json">'
+            '</head><body><div id="root"></div></body></html>'
+        )
+        manifest_json = '{"short_name":"Commit","name":"Commit Swimming"}'
+        session = mock_sess.return_value
+        session.get.side_effect = [
+            _mock_response(url="https://scarswimming.ca/", html=main_html),
+            _mock_response(url="https://scarswimming.ca/manifest.json", html=manifest_json),
+        ]
+        assert detect("https://scarswimming.ca")["software"] == "Commit"
+
+
 class TestTextPatternDetection:
     @patch("src.detector._get_session")
     def test_gomotion_text(self, mock_sess):
