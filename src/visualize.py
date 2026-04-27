@@ -399,10 +399,11 @@ def generate_html(df, output_path):
     total = len(df)
     provinces = df["province"].nunique()
     platforms = df["software"].nunique()
-    top_platform = (
+    _sw_counts = (
         df[~df["software"].isin(_EXCLUDE_FROM_DISTRIBUTION)]["software"]
-        .value_counts().idxmax()
+        .value_counts()
     )
+    top_platform = _sw_counts.idxmax() if not _sw_counts.empty else "—"
 
     stats_html = f"""
 <div class="stats">

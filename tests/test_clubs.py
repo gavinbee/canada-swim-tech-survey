@@ -76,6 +76,12 @@ class TestCityFromAddress:
         assert _city_from_address("") == ""
 
 
+@pytest.fixture(autouse=True)
+def no_snapshot_writes(monkeypatch):
+    """Prevent tests from overwriting data/clubs.json."""
+    monkeypatch.setattr("src.clubs._save_snapshot", lambda clubs: None)
+
+
 class TestFetchAllClubs:
     _SAMPLE_CLUBS = [
         {
