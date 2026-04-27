@@ -156,4 +156,4 @@ national Swimming Canada feed.
    Use `_make_club(name, website, province, postal)` as a helper.
 4. Register the new entry in `_PROVINCIAL_SOURCES` as `("XX", "scraper_type", url)`.
 5. Run `python main.py --refresh-clubs` locally to refresh `data/clubs.json`.
-6. Update this document.
+6. Update this document and [data_sources.md](data_sources.md).
