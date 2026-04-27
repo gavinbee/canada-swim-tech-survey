@@ -18,7 +18,10 @@ import time
 from urllib.parse import urlparse
 
 import requests
+import urllib3
 from bs4 import BeautifulSoup
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 log = logging.getLogger(__name__)
 
