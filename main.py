@@ -109,7 +109,7 @@ def _write_run_info(df, ran_at):
     log.info("Run info → %s", RUN_INFO_MD)
 
 
-def run(limit=None, use_cache=True, extra_delay=0.0):
+def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False):
     OUTPUT_DIR.mkdir(exist_ok=True)
     DATA_DIR.mkdir(exist_ok=True)
     ran_at = datetime.now(timezone.utc)
@@ -118,7 +118,7 @@ def run(limit=None, use_cache=True, extra_delay=0.0):
     # Step 1: fetch clubs
     # ----------------------------------------------------------------
     log.info("=== Step 1: Fetching club list ===")
-    clubs = fetch_all_clubs()
+    clubs = fetch_all_clubs(force_refresh=refresh_clubs)
 
     if not clubs:
         log.error("No clubs found — check network access and Swimming Canada website.")
@@ -195,10 +195,15 @@ if __name__ == "__main__":
         "--delay", type=float, default=0.0,
         help="Extra delay in seconds between requests (on top of built-in politeness delay)"
     )
+    parser.add_argument(
+        "--refresh-clubs", action="store_true",
+        help="Re-fetch the club list from Swimming Canada and update data/clubs.json"
+    )
     args = parser.parse_args()
 
     run(
         limit=args.limit,
         use_cache=not args.no_cache,
         extra_delay=args.delay,
+        refresh_clubs=args.refresh_clubs,
     )

@@ -119,13 +119,13 @@ class TestFetchAllClubs:
     @patch("src.clubs.requests.get")
     def test_basic_fetch(self, mock_get):
         mock_get.return_value = self._make_response(self._SAMPLE_CLUBS)
-        clubs = fetch_all_clubs()
+        clubs = fetch_all_clubs(force_refresh=True)
         assert len(clubs) == 3
 
     @patch("src.clubs.requests.get")
     def test_province_derived_from_postal(self, mock_get):
         mock_get.return_value = self._make_response(self._SAMPLE_CLUBS)
-        clubs = fetch_all_clubs()
+        clubs = fetch_all_clubs(force_refresh=True)
         by_name = {c["name"]: c for c in clubs}
         assert by_name["Test Swim Club"]["province"] == "ON"
         assert by_name["Facebook Club"]["province"] == "BC"
@@ -134,16 +134,15 @@ class TestFetchAllClubs:
     @patch("src.clubs.requests.get")
     def test_facebook_url_cleared(self, mock_get):
         mock_get.return_value = self._make_response(self._SAMPLE_CLUBS)
-        clubs = fetch_all_clubs()
+        clubs = fetch_all_clubs(force_refresh=True)
         by_name = {c["name"]: c for c in clubs}
         assert by_name["Facebook Club"]["website"] == ""
-        assert "facebook.com" in by_name["Facebook Club"]["facebook"]
 
     @patch("src.clubs.requests.get")
     def test_deduplication(self, mock_get):
         duplicate = self._SAMPLE_CLUBS + [self._SAMPLE_CLUBS[0]]
         mock_get.return_value = self._make_response(duplicate)
-        clubs = fetch_all_clubs()
+        clubs = fetch_all_clubs(force_refresh=True)
         names = [c["name"] for c in clubs]
         assert names.count("Test Swim Club") == 1
 
@@ -153,12 +152,14 @@ class TestFetchAllClubs:
         mock.raise_for_status = MagicMock()
         mock.text = json.dumps(self._SAMPLE_CLUBS[:1])
         mock_get.return_value = mock
-        clubs = fetch_all_clubs()
+        clubs = fetch_all_clubs(force_refresh=True)
         assert len(clubs) == 1
 
+    @patch("src.clubs.SNAPSHOT_PATH")
     @patch("src.clubs.requests.get")
-    def test_network_error_returns_empty(self, mock_get):
+    def test_network_error_no_snapshot_returns_empty(self, mock_get, mock_path):
         import requests as req
         mock_get.side_effect = req.RequestException("timeout")
-        clubs = fetch_all_clubs()
+        mock_path.exists.return_value = False
+        clubs = fetch_all_clubs(force_refresh=True)
         assert clubs == []

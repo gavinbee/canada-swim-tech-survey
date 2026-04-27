@@ -10,6 +10,7 @@ import json
 import logging
 import re
 import time
+from pathlib import Path
 
 import requests
 
@@ -87,11 +88,37 @@ def _city_from_address(address):
     return ""
 
 
-def fetch_all_clubs():
+SNAPSHOT_PATH = Path(__file__).parent.parent / "data" / "clubs.json"
+
+
+def fetch_all_clubs(force_refresh=False):
     """
-    Fetch 400+ clubs from Swimming Canada's club-list API.
-    Returns a list of dicts ready for software detection.
+    Return 400+ Canadian swim club dicts ready for software detection.
+
+    Tries the live Swimming Canada API first.  If that fails (e.g. the
+    server blocks cloud IP ranges such as GitHub Actions), falls back to
+    the committed snapshot at data/clubs.json.
+
+    Pass force_refresh=True (or run main.py --refresh-clubs) to skip the
+    snapshot and always hit the live API, then save a new snapshot.
     """
+    if not force_refresh and SNAPSHOT_PATH.exists():
+        return _load_snapshot()
+
+    clubs = _fetch_live()
+    if clubs:
+        _save_snapshot(clubs)
+        return clubs
+
+    # Live fetch failed — fall back to snapshot
+    if SNAPSHOT_PATH.exists():
+        log.warning("Live fetch failed; using committed snapshot %s", SNAPSHOT_PATH)
+        return _load_snapshot()
+
+    return []
+
+
+def _fetch_live():
     log.info("Fetching club list from %s", CLUB_LIST_URL)
     try:
         r = requests.get(
@@ -102,10 +129,9 @@ def fetch_all_clubs():
         )
         r.raise_for_status()
     except requests.RequestException as exc:
-        log.error("Failed to fetch club list: %s", exc)
+        log.warning("Live club-list fetch failed: %s", exc)
         return []
 
-    # Response is JSONP: load_clubs([...])
     text = r.text.strip()
     if text.startswith("load_clubs("):
         text = text[len("load_clubs("):]
@@ -117,7 +143,7 @@ def fetch_all_clubs():
     try:
         raw = json.loads(text)
     except ValueError as exc:
-        log.error("JSON parse error: %s", exc)
+        log.warning("JSON parse error: %s", exc)
         return []
 
     clubs = []
@@ -127,17 +153,12 @@ def fetch_all_clubs():
         address = item.get("address", "")
         website = (item.get("website") or "").strip().rstrip("/")
         province = _province_from_address(address)
-        city = _city_from_address(address)
 
-        # Skip Facebook pages as the "website" — flag them specially
         if "facebook.com" in website:
             website_clean = ""
-            facebook_page = website
         else:
             website_clean = website
-            facebook_page = ""
 
-        # Deduplicate on (name, website)
         key = (name.lower(), website_clean.lower())
         if key in seen:
             continue
@@ -147,15 +168,29 @@ def fetch_all_clubs():
             "name": name,
             "province": province,
             "province_name": PROVINCE_NAMES.get(province, province),
-            "city": city,
             "website": website_clean,
-            "facebook": facebook_page,
-            "members": None,
-            "lat": item.get("lat"),
-            "lng": item.get("lng"),
             "source": "swimming_canada_api",
         })
 
-    log.info("Fetched %d clubs (%d with websites)", len(clubs),
+    log.info("Fetched %d clubs live (%d with websites)", len(clubs),
              sum(1 for c in clubs if c["website"]))
     return clubs
+
+
+def _load_snapshot():
+    with open(SNAPSHOT_PATH, encoding="utf-8") as f:
+        clubs = json.load(f)
+    log.info("Loaded %d clubs from snapshot %s", len(clubs), SNAPSHOT_PATH)
+    return clubs
+
+
+def _save_snapshot(clubs):
+    SNAPSHOT_PATH.parent.mkdir(exist_ok=True)
+    snapshot = [
+        {"name": c["name"], "province": c["province"],
+         "province_name": c["province_name"], "website": c["website"]}
+        for c in clubs
+    ]
+    with open(SNAPSHOT_PATH, "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, indent=2, ensure_ascii=False)
+    log.info("Saved club snapshot → %s", SNAPSHOT_PATH)
