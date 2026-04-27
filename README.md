@@ -31,15 +31,12 @@ websites (BC, AB, SK, …)                          │
 
 ### 1 — Club discovery (`src/clubs.py`)
 
-1. Hits the Swimming Canada REST API (`swimming.ca/wp-json/wp/v2/clubs`) for a paginated
-   JSON list of all affiliated clubs.
-2. If the API is unavailable or returns no data, falls back to scraping the HTML
-   club-finder page at `swimming.ca/en/clubs/`.
-3. Scrapes each provincial association's club-listing page (Swim BC, Swim Alberta, etc.)
-   to fill any gaps, deduplicating on normalised website URL.
+Starts with the Swimming Canada national club-list API (JSONP), then supplements
+with provincial association directories for BC, AB, MB, and ON to capture clubs
+not registered nationally. Results are deduplicated on name and website URL.
 
-Each club record carries: `name`, `province` (2-letter code), `province_name`,
-`city`, `website`, `members` (registered swimmers where available), `source`.
+See [`docs/club_discovery.md`](docs/club_discovery.md) for the complete source
+inventory, data formats, and implementation status for each province.
 
 ### 2 — Software detection (`src/detector.py`)
 

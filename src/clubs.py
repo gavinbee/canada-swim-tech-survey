@@ -10,9 +10,13 @@ import json
 import logging
 import re
 import time
+import warnings
 from pathlib import Path
 
 import requests
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 log = logging.getLogger(__name__)
 
@@ -90,10 +94,14 @@ def _city_from_address(address):
 
 SNAPSHOT_PATH = Path(__file__).parent.parent / "data" / "clubs.json"
 
-# Provincial sources: Gatsby page-data JSON endpoints keyed by province code
-_PROVINCIAL_SOURCES = {
-    "ON": "https://www.swimontario.com/page-data/clubs/find-a-club/page-data.json",
-}
+# Provincial sources: (province_code, scraper_type, url)
+# scraper_type: "gatsby_json" | "html_table_bc" | "html_table_mb" | "html_divs_ab"
+_PROVINCIAL_SOURCES = [
+    ("ON", "gatsby_json",  "https://www.swimontario.com/page-data/clubs/find-a-club/page-data.json"),
+    ("BC", "html_table_bc", "https://swimbc.ca/clubs/how-to-join-a-swim-club/"),
+    ("AB", "html_divs_ab",  "https://swimalberta.ca/community/clubs/find-a-club/"),
+    ("MB", "html_table_mb", "https://swimmanitoba.mb.ca/clubs/"),
+]
 
 
 def fetch_all_clubs(force_refresh=False):
@@ -144,8 +152,8 @@ def _merge_provincial(clubs):
     existing_sites = {c["website"].lower() for c in clubs if c["website"]}
 
     added = 0
-    for province, url in _PROVINCIAL_SOURCES.items():
-        provincial = _fetch_provincial(province, url)
+    for province, scraper, url in _PROVINCIAL_SOURCES:
+        provincial = _fetch_provincial(province, scraper, url)
         for club in provincial:
             name_key = club["name"].lower()
             site_key = club["website"].lower() if club["website"] else None
@@ -164,39 +172,115 @@ def _merge_provincial(clubs):
     return clubs
 
 
-def _fetch_provincial(province, url):
-    log.info("Fetching provincial club list: %s", url)
+def _fetch_provincial(province, scraper, url):
+    log.info("Fetching provincial club list (%s): %s", province, url)
+    ua = {"User-Agent": HEADERS["User-Agent"]}
     try:
-        r = requests.get(url, headers={"User-Agent": HEADERS["User-Agent"]}, timeout=20)
+        r = requests.get(url, headers=ua, timeout=20, verify=False)
         r.raise_for_status()
-        data = r.json()
     except Exception as exc:
         log.warning("Provincial fetch failed (%s): %s", province, exc)
         return []
 
-    try:
-        children = data["result"]["data"]["wagtail"]["page"]["children"]
-    except (KeyError, TypeError):
-        log.warning("Unexpected structure from provincial source %s", url)
-        return []
+    if scraper == "gatsby_json":
+        return _parse_gatsby_json(province, r)
+    if scraper == "html_table_bc":
+        return _parse_bc_table(province, r)
+    if scraper == "html_table_mb":
+        return _parse_mb_table(province, r)
+    if scraper == "html_divs_ab":
+        return _parse_ab_divs(province, r)
 
+    log.warning("Unknown provincial scraper type: %s", scraper)
+    return []
+
+
+def _make_club(name, website, province, postal=""):
+    prov = _province_from_address(postal) or province
+    return {
+        "name": name,
+        "province": prov,
+        "province_name": PROVINCE_NAMES.get(prov, prov),
+        "website": _normalise_website(website),
+        "source": f"provincial_{province.lower()}",
+    }
+
+
+def _parse_gatsby_json(province, r):
+    try:
+        data = r.json()
+        children = data["result"]["data"]["wagtail"]["page"]["children"]
+    except (ValueError, KeyError, TypeError) as exc:
+        log.warning("Gatsby JSON parse failed (%s): %s", province, exc)
+        return []
     clubs = []
     for item in children:
         name = (item.get("name") or "").strip()
-        if not name:
-            continue
-        website = _normalise_website(item.get("website") or "")
-        postal = (item.get("postalcode") or "").strip()
-        prov = _province_from_address(postal) or province
-        clubs.append({
-            "name": name,
-            "province": prov,
-            "province_name": PROVINCE_NAMES.get(prov, prov),
-            "website": website,
-            "source": f"provincial_{province.lower()}",
-        })
+        if name:
+            clubs.append(_make_club(name, item.get("website") or "", province,
+                                    item.get("postalcode") or ""))
+    log.info("Fetched %d clubs from Gatsby JSON (%s)", len(clubs), province)
+    return clubs
 
-    log.info("Fetched %d clubs from provincial source (%s)", len(clubs), province)
+
+def _parse_bc_table(province, r):
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(r.text, "lxml")
+    table = soup.find("table")
+    if not table:
+        log.warning("BC table not found")
+        return []
+    clubs = []
+    for row in table.find_all("tr")[1:]:  # skip header
+        cells = row.find_all(["td", "th"])
+        if len(cells) < 2:
+            continue
+        name = cells[1].get_text(strip=True)
+        links = [a["href"] for a in row.find_all("a", href=True)
+                 if a["href"].startswith("http") and "google" not in a["href"]
+                 and "facebook" not in a["href"]]
+        if name:
+            clubs.append(_make_club(name, links[0] if links else "", province))
+    log.info("Fetched %d clubs from BC table", len(clubs))
+    return clubs
+
+
+def _parse_mb_table(province, r):
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(r.text, "lxml")
+    table = soup.find("table")
+    if not table:
+        log.warning("MB table not found")
+        return []
+    clubs = []
+    for row in table.find_all("tr")[1:]:
+        cells = row.find_all(["td", "th"])
+        if not cells:
+            continue
+        name = cells[0].get_text(strip=True)
+        links = [a["href"] for a in row.find_all("a", href=True)
+                 if a["href"].startswith("http") and "google" not in a["href"]
+                 and "facebook" not in a["href"]]
+        if name:
+            clubs.append(_make_club(name, links[0] if links else "", province))
+    log.info("Fetched %d clubs from MB table", len(clubs))
+    return clubs
+
+
+def _parse_ab_divs(province, r):
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(r.text, "lxml")
+    clubs = []
+    for div in soup.find_all("div", class_="club_directory_col"):
+        text = div.get_text(separator="|", strip=True)
+        m = re.search(r"Club Name:\|([^|]+)", text)
+        name = m.group(1).strip() if m else ""
+        links = [a["href"] for a in div.find_all("a", href=True)
+                 if a["href"].startswith("http") and "google" not in a["href"]
+                 and "facebook" not in a["href"] and "swimalberta" not in a["href"]]
+        if name:
+            clubs.append(_make_club(name, links[0] if links else "", province))
+    log.info("Fetched %d clubs from AB divs", len(clubs))
     return clubs
 
 
