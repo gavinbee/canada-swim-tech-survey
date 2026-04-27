@@ -434,10 +434,9 @@ def generate_html(df, output_path):
   <h1>Canadian Swim Club — Team Management Software Survey</h1>
   <p>Automated survey of swimming.ca-registered clubs and provincial associations</p>
   <p style="margin-top:.6rem;font-size:.8rem;opacity:.65;">
-    Club list sourced from the
-    <a href="https://www.swimming.ca" target="_blank" rel="noreferrer"
-       style="color:#93c5fd;">Swimming Canada public club directory</a>.
-    Individual club addresses are not stored or published.
+    Club list sourced from the Swimming Canada national feed and several
+    <a href="https://github.com/gavinbee/canada-swim-tech-survey/blob/main/docs/data_sources.md"
+       target="_blank" rel="noreferrer" style="color:#93c5fd;">provincial directories</a>.
   </p>
   {disclaimer_html}
 </header>
