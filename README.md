@@ -109,7 +109,7 @@ Outputs:
 ## Project layout
 
 ```
-swim-club-software/
+canada-swim-tech-survey/
 ├── main.py              Entry point / orchestrator
 ├── src/
 │   ├── clubs.py         Club discovery (Swimming Canada + provincial)
