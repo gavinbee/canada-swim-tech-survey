@@ -183,6 +183,8 @@ def _category_chart(df):
 
 def _size_chart(df):
     """Bar chart of software by member-count bucket (only if data available)."""
+    if "members" not in df.columns:
+        return None
     has_members = df["members"].notna().sum()
     if has_members < 5:
         return None
@@ -270,7 +272,7 @@ new Chart(document.getElementById('{cid}'), {cfg});
 
 
 def _table_html(df):
-    cols = ["name", "province", "city", "software", "category", "members", "website", "final_url"]
+    cols = ["name", "province", "software", "category", "website", "final_url"]
     cols = [c for c in cols if c in df.columns]
     rows = []
     for _, r in df.iterrows():
@@ -417,6 +419,12 @@ def generate_html(df, output_path):
 <header>
   <h1>Canadian Swim Club — Team Management Software Survey</h1>
   <p>Automated survey of swimming.ca-registered clubs and provincial associations</p>
+  <p style="margin-top:.6rem;font-size:.8rem;opacity:.65;">
+    Club list sourced from the
+    <a href="https://www.swimming.ca" target="_blank" rel="noreferrer"
+       style="color:#93c5fd;">Swimming Canada public club directory</a>.
+    Individual club addresses are not stored or published.
+  </p>
 </header>
 <main>
 {stats_html}

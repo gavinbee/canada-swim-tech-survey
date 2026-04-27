@@ -4,6 +4,9 @@ Automatically discovers every Swimming Canada–registered club, visits their we
 and detects which team management / registration platform they use.
 Results are saved to CSV and rendered as an interactive HTML report with Chart.js bar graphs.
 
+Club list sourced from the [Swimming Canada public club directory](https://www.swimming.ca).
+Individual club addresses are not stored or published.
+
 Built with assistance from [Claude](https://claude.ai) by Anthropic.
 
 ---
