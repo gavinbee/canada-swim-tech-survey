@@ -2476,5 +2476,389 @@
     "province": "ON",
     "province_name": "Ontario",
     "website": ""
+  },
+  {
+    "name": "Cricket Currents Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.torontocricketclub.com"
+  },
+  {
+    "name": "Granite Gators Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.graniteclub.com"
+  },
+  {
+    "name": "Milton Marlin Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.miltonmarlins.ca"
+  },
+  {
+    "name": "Mallards Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.mallardsswimming.com"
+  },
+  {
+    "name": "Newmarket Stingrays Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://newmarketstingrays.org"
+  },
+  {
+    "name": "Pickering Swim Club Inc",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "http://www.pickswimclub.com"
+  },
+  {
+    "name": "Witchurch-Stouffville Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://stouffvilleswimclub.com"
+  },
+  {
+    "name": "Carleton Place Water Dragons",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.cpwd.ca"
+  },
+  {
+    "name": "Ernestown Barracuda Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "http://www.ernestownbarracudas.net"
+  },
+  {
+    "name": "Nepean Kanata Barracudas Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.swimnkb.com"
+  },
+  {
+    "name": "Hawkesbury ORCA Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Capital Wave",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://capitalwave.ca"
+  },
+  {
+    "name": "The Richmond Hill Aquatic Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.rhac.ca"
+  },
+  {
+    "name": "Collingwood Clippers Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.collingwoodclippers.ca"
+  },
+  {
+    "name": "Hanover Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.hanoverswimclub.ca"
+  },
+  {
+    "name": "Cochrane Great Whites Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Timmins Marlins",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://timminsmarlins.ca"
+  },
+  {
+    "name": "Cyclone Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://cycloneswimclub.ca"
+  },
+  {
+    "name": "Kenora Swimming Sharks",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://kenoraswimming.ca"
+  },
+  {
+    "name": "Northwest Narwhal Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.nwnarwhal.com"
+  },
+  {
+    "name": "Kingston Blue Marlins",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://swimkingston.ca"
+  },
+  {
+    "name": "Petawawa Predators",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Carleton University",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Red Lake Goldfins",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "McMaster University",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Queen's University",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Orangeville Otters Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.gomotionapp.com/team/canoott/page/home"
+  },
+  {
+    "name": "Carleton University Masters Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.sce.carleton.ca/faculty/lynnmar/masters"
+  },
+  {
+    "name": "St. Clair Current",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.teamunify.com/team/canscc/page/home#:~:text=About%20Us-,St.,ability%20from%20ages%206%20%2D%2018."
+  },
+  {
+    "name": "Windsor-Essex Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://westswim.ca"
+  },
+  {
+    "name": "University of Waterloo",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Nickel City Aquatics",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.ncaswimming.ca"
+  },
+  {
+    "name": "Guelph Marlin Aquatic Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.guelphmarlins.com"
+  },
+  {
+    "name": "Ottawa Rideau Speedeaus",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.rideauspeedeaus.com"
+  },
+  {
+    "name": "CHATHAM Y POOL SHARKS",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.chathampoolsharks.com"
+  },
+  {
+    "name": "Western University",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Hamilton Aquatic Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.hacswim.ca"
+  },
+  {
+    "name": "Huron Hurricanes Aquatic Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://huronhurricanes.ca"
+  },
+  {
+    "name": "Brantford Aquatic Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.gomotionapp.com/team/canbac/page/home"
+  },
+  {
+    "name": "Leamington Lasers Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.leamingtonlasers.ca"
+  },
+  {
+    "name": "University of Guelph",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Region of Waterloo Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.teamunify.com/team/canrwsc/page/home"
+  },
+  {
+    "name": "Thornhill Multisport",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://thornhillmultisport.com"
+  },
+  {
+    "name": "Royal City Aquatics",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://royalcityaquatics.ca"
+  },
+  {
+    "name": "Stoney Creek Aquatic Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.stoneycreekaquaticteam.com"
+  },
+  {
+    "name": "Sarnia Rapids Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.teamunify.com/team/onss/page/about"
+  },
+  {
+    "name": "St. Thomas Jumbo Jets",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.stjj.ca"
+  },
+  {
+    "name": "Wilmot Aquatic Aces Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.gomotionapp.com/team/canwaasc/page/home"
+  },
+  {
+    "name": "London Silver Dolphins",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Burlington Masters Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://bmsc.ca"
+  },
+  {
+    "name": "ELAC",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Brock University",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Hearst Phoenix Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Ancaster Alligator Swim Team Inc.",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.gomotionapp.com/team/canaast/page/home"
+  },
+  {
+    "name": "Club Warriors Swimming",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.teamunify.com/team/cancw/page/home"
+  },
+  {
+    "name": "Equipe natation Sturgeon Falls Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Orillia Channel Cats Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.orilliachannelcats.ca"
+  },
+  {
+    "name": "Deep River CANDU swim club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Downtown Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://dsctoronto.ca"
+  },
+  {
+    "name": "Team Atomica Swim Team",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.teamatomica.com"
+  },
+  {
+    "name": "Clarington Multisport Association",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
+  },
+  {
+    "name": "Temiskaming Nothern Loons Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.tnlswim.com/join-tnl"
+  },
+  {
+    "name": "Temiskaming Northern Loons Swim Club",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": "https://www.tnlswim.com"
+  },
+  {
+    "name": "Masters NNNGU",
+    "province": "ON",
+    "province_name": "Ontario",
+    "website": ""
   }
 ]
