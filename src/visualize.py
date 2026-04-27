@@ -25,6 +25,49 @@ COLOURS = [
     "#2DD4BF", "#F472B6", "#A3E635", "#FB923C", "#818CF8",
 ]
 
+# Homepage URLs for each known platform (used to make bar labels clickable)
+PLATFORM_URLS = {
+    "GoMotion":                 "https://www.gomotionapp.com",
+    "PoolQ":                    "https://poolq.net",
+    "Amilia":                   "https://www.amilia.com",
+    "Uplifter":                 "https://www.uplifter.ca",
+    "TeamUnify":                "https://www.teamunify.com",
+    "Club Assistant":           "https://www.clubassistant.com",
+    "SwimTopia":                "https://www.swimtopia.com",
+    "Swimmingly":               "https://goswimmingly.com",
+    "Webpoint":                 "https://www.webpoint.us",
+    "JerseyWatch":              "https://www.jerseywatch.com",
+    "TeamLinkt":                "https://www.teamlinkt.com",
+    "Sidearm Sports":           "https://sidearmsports.com",
+    "Presto Sports":            "https://www.prestosports.com",
+    "GoalLine (Stack Sports)":  "https://www.goalline.ca",
+    "Jonas Club Software":      "https://www.jonasclub.com",
+    "SportsEngine":             "https://www.sportsengine.com",
+    "TeamSnap":                 "https://www.teamsnap.com",
+    "Jackrabbit":               "https://www.jackrabbittech.com",
+    "iClass Pro":               "https://www.iclasspro.com",
+    "Sporty HQ":                "https://sportyhq.com",
+    "Active Network":           "https://www.activenetwork.com",
+    "Regatta Network":          "https://www.regattanetwork.com",
+    "rTeam":                    "https://rteam.com",
+    "FinalForms":               "https://www.finalforms.com",
+    "WordPress":                "https://wordpress.org",
+    "Wix":                      "https://www.wix.com",
+    "Squarespace":              "https://www.squarespace.com",
+    "Weebly":                   "https://www.weebly.com",
+    "Google Sites":             "https://sites.google.com",
+    "Jimdo":                    "https://www.jimdo.com",
+    "Webflow":                  "https://webflow.com",
+    "GoDaddy Website Builder":  "https://www.godaddy.com/websites/website-builder",
+    "WebSelf":                  "https://www.webself.net",
+    "Duda":                     "https://www.duda.co",
+    "Drupal":                   "https://www.drupal.org",
+    "Joomla":                   "https://www.joomla.org",
+}
+
+# Values that should never appear in the software distribution chart
+_EXCLUDE_FROM_DISTRIBUTION = {"Error", "No Website"}
+
 
 def _colour(i):
     return COLOURS[i % len(COLOURS)]
@@ -38,31 +81,49 @@ def _platform_colours(platforms):
 # Chart data builders
 # -------------------------------------------------------------------
 
-def _overall_chart(df):
-    counts = df["software"].value_counts()
-    labels = counts.index.tolist()
-    data = counts.values.tolist()
-    colours = [_colour(i) for i in range(len(labels))]
-    return {
-        "type": "bar",
-        "data": {
-            "labels": labels,
-            "datasets": [{
-                "label": "Number of clubs",
-                "data": data,
-                "backgroundColor": colours,
-            }],
-        },
-        "options": {
-            "indexAxis": "y",
-            "responsive": True,
-            "plugins": {
-                "title": {"display": True, "text": "Team management software — all Canadian swim clubs"},
-                "legend": {"display": False},
-            },
-            "scales": {"x": {"beginAtZero": True, "ticks": {"stepSize": 1}}},
-        },
-    }
+def _overall_chart_html(df):
+    """
+    Returns a self-contained HTML horizontal bar chart where each platform
+    name is a real <a> link to its homepage.  Uses CSS flexbox — no canvas.
+    Error and No Website rows are excluded.
+    """
+    counts = (
+        df[~df["software"].isin(_EXCLUDE_FROM_DISTRIBUTION)]["software"]
+        .value_counts()
+    )
+    if counts.empty:
+        return "<p>No data.</p>"
+
+    max_count = int(counts.iloc[0])
+    rows_html = []
+    for i, (name, count) in enumerate(counts.items()):
+        colour = _colour(i)
+        url = PLATFORM_URLS.get(name)
+        if url:
+            label = (
+                f'<a href="{url}" target="_blank" rel="noreferrer" '
+                f'class="sw-link">{name}</a>'
+            )
+        else:
+            label = f'<span class="sw-nolink">{name}</span>'
+        pct = count / max_count * 100
+        rows_html.append(f"""
+      <div class="hbar-row">
+        <div class="hbar-label">{label}</div>
+        <div class="hbar-track">
+          <div class="hbar-fill" style="width:{pct:.1f}%;background:{colour}">
+            <span class="hbar-count">{count}</span>
+          </div>
+        </div>
+      </div>""")
+
+    return f"""
+<div class="chart-card hbar-card">
+  <div class="hbar-title">Team management software — Canadian swim clubs</div>
+  <div class="hbar-subtitle">(Error and No Website excluded)</div>
+  <div class="hbar-chart">{''.join(rows_html)}
+  </div>
+</div>"""
 
 
 def _province_stacked_chart(df, pal):
@@ -276,6 +337,23 @@ _HTML_HEAD = """<!DOCTYPE html>
   td { padding: .4rem .75rem; border-bottom: 1px solid #f1f5f9; }
   tr:hover td { background: #f8fafc; }
   a { color: #2563EB; }
+  /* HTML horizontal bar chart */
+  .hbar-card { grid-column: 1 / -1; }
+  .hbar-title { font-size: 1rem; font-weight: 600; color: #1e3a5f; margin-bottom: .2rem; }
+  .hbar-subtitle { font-size: .75rem; color: #94a3b8; margin-bottom: 1rem; }
+  .hbar-chart { display: flex; flex-direction: column; gap: .45rem; }
+  .hbar-row { display: flex; align-items: center; gap: .75rem; }
+  .hbar-label { flex: 0 0 190px; text-align: right; font-size: .85rem; white-space: nowrap;
+                overflow: hidden; text-overflow: ellipsis; }
+  .sw-link { color: #2563EB; text-decoration: none; font-weight: 500; }
+  .sw-link:hover { text-decoration: underline; }
+  .sw-nolink { color: #475569; }
+  .hbar-track { flex: 1; background: #f1f5f9; border-radius: 4px; height: 26px;
+                overflow: hidden; }
+  .hbar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center;
+               min-width: 2rem; transition: width .3s ease; }
+  .hbar-count { padding: 0 .5rem; font-size: .78rem; font-weight: 600; color: #fff;
+                white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -287,11 +365,8 @@ def generate_html(df, output_path):
 
     charts_html = ""
 
-    # Chart 1: overall
-    cfg = _overall_chart(df)
-    charts_html += _CHART_TEMPLATE.format(
-        cid="overall", cfg=json.dumps(cfg)
-    )
+    # Chart 1: overall — HTML bar chart so platform names are real links
+    charts_html += _overall_chart_html(df)
 
     # Chart 2: category doughnut
     cfg = _category_chart(df)
@@ -322,7 +397,10 @@ def generate_html(df, output_path):
     total = len(df)
     provinces = df["province"].nunique()
     platforms = df["software"].nunique()
-    top_platform = df["software"].value_counts().idxmax()
+    top_platform = (
+        df[~df["software"].isin(_EXCLUDE_FROM_DISTRIBUTION)]["software"]
+        .value_counts().idxmax()
+    )
 
     stats_html = f"""
 <div class="stats">
