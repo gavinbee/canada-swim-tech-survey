@@ -340,6 +340,7 @@ _HTML_HEAD = """<!DOCTYPE html>
   td { padding: .4rem .75rem; border-bottom: 1px solid #f1f5f9; }
   tr:hover td { background: #f8fafc; }
   a { color: #2563EB; }
+  footer { border-top: 1px solid #e2e8f0; margin-top: 1rem; }
   /* HTML horizontal bar chart */
   .hbar-card { grid-column: 1 / -1; }
   .hbar-title { font-size: 1rem; font-weight: 600; color: #1e3a5f; margin-bottom: .2rem; }
@@ -447,8 +448,18 @@ def generate_html(df, output_path):
 {charts_html}
 </div>
 <h2>Full data</h2>
+<div style="margin-bottom:.75rem;">
+  <a href="https://github.com/gavinbee/canada-swim-tech-survey/releases/latest/download/results.csv"
+     style="display:inline-block;padding:.4rem .9rem;background:#2563EB;color:#fff;border-radius:6px;font-size:.85rem;text-decoration:none;font-weight:500;">
+    &#8595; Download CSV
+  </a>
+</div>
 {_table_html(df)}
 </main>
+<footer style="text-align:center;padding:1.5rem;font-size:.8rem;color:#94a3b8;">
+  <a href="https://github.com/gavinbee/canada-swim-tech-survey/releases/latest"
+     target="_blank" rel="noreferrer">Release notes &amp; past datasets</a>
+</footer>
 </body>
 </html>
 """
