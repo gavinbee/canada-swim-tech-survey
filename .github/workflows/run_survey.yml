@@ -56,3 +56,15 @@ jobs:
             --title "Survey $(date -u +'%B %-d, %Y')" \
             --notes-file output/RUN_INFO.md \
             "data/results.csv#Club software dataset (CSV)"
+
+      - name: Check error threshold
+        run: |
+          python - <<'EOF'
+          import pandas as pd, sys
+          df = pd.read_csv("data/results.csv")
+          errors = int(df["error"].notna().sum())
+          print(f"Clubs with errors: {errors}")
+          if errors >= 25:
+              print(f"::error::Error rate too high ({errors} errors >= threshold of 25) — results may be unreliable")
+              sys.exit(1)
+          EOF

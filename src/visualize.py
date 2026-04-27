@@ -12,6 +12,7 @@ Charts produced:
 
 import json
 import math
+import os
 from collections import defaultdict
 from pathlib import Path
 
@@ -414,6 +415,17 @@ def generate_html(df, output_path):
 </div>
 """
 
+    disclaimer_html = ""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        error_count = int(df["error"].notna().sum())
+        disclaimer_html = f"""
+<div style="background:#7c2d12;color:#fed7aa;padding:.75rem 1.25rem;border-radius:.5rem;margin-bottom:1.5rem;font-size:.85rem;">
+  <strong>Note:</strong> This report was generated automatically via GitHub Actions
+  ({error_count} clubs returned errors). Automated runs may have a higher error rate
+  than locally generated results due to network restrictions and IP blocking by some
+  club websites.
+</div>"""
+
     html = (
         _HTML_HEAD
         + f"""
@@ -428,6 +440,7 @@ def generate_html(df, output_path):
   </p>
 </header>
 <main>
+{disclaimer_html}
 {stats_html}
 <h2>Charts</h2>
 <div class="grid">

@@ -17,6 +17,7 @@ Steps:
 import argparse
 import csv
 import logging
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -97,6 +98,16 @@ def _write_run_info(df, ran_at):
     ]
     for name, count in top.items():
         lines.append(f"- {name}: {count}")
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        error_count = int(df["error"].notna().sum())
+        lines += [
+            "",
+            f"> **Note:** This run was generated automatically via GitHub Actions "
+            f"({error_count} clubs returned errors). Automated runs may have a higher "
+            f"error rate than locally generated results due to network restrictions "
+            f"and IP blocking by some club websites.",
+        ]
+
     lines += [
         "",
         "**Data source:** Club list sourced from the "
