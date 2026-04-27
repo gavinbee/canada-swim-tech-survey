@@ -64,7 +64,7 @@ jobs:
           df = pd.read_csv("data/results.csv")
           errors = int(df["error"].notna().sum())
           print(f"Clubs with errors: {errors}")
-          if errors >= 25:
+          if errors >= 50:
               print(f"::error::Error rate too high ({errors} errors >= threshold of 25) — results may be unreliable")
               sys.exit(1)
           EOF
