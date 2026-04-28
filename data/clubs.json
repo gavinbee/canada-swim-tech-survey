@@ -3,3534 +3,4109 @@
     "name": "Charlottetown Bluephins Aquatic Club",
     "province": "PE",
     "province_name": "Prince Edward Island",
-    "website": "https://www.gomotionapp.com/team/cancb/page/home"
+    "website": "https://www.gomotionapp.com/team/cancb/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Summerside Dolphin Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://www.summersidedolphins.com"
+    "website": "https://www.summersidedolphins.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Bridgewater Barracudas",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cape Breton Dorados",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cole Harbour Hurricanes",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "http://coleharbourhurricanes.com"
+    "website": "http://coleharbourhurricanes.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cumberland Spartans",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Halifax Trojan Aquatic Club",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://htac.ca"
+    "website": "https://htac.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kings Edge Hill School",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://www.kes.ns.ca"
+    "website": "https://www.kes.ns.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Pictou County Mariners",
     "province": "",
     "province_name": "",
-    "website": "https://pcm.poolq.net"
+    "website": "https://pcm.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. Margaret's Bay Breakers",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://www.smbb.ca"
+    "website": "https://www.smbb.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Sackville Waves Aquatic Team",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://swat.poolq.net"
+    "website": "https://swat.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wolfville Tritons Swim Club",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Yarmouth Whitecaps",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://sites.google.com/view/yarmouthwhitecaps/home"
+    "website": "https://sites.google.com/view/yarmouthwhitecaps/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Aqua Aces Swim Club",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Conception Bay South Bluefins",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": "https://cbsbluefins.ca"
+    "website": "https://cbsbluefins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Corner Brook Rapids Swimclub",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": "https://www.cbrapids.com"
+    "website": "https://www.cbrapids.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Melville Mantas Swim Club",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Mount Pearl Marlins Swim Club",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Northern Lights Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Port Aux Basques Piranhas",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. Johns Legends Swim Club",
     "province": "NL",
     "province_name": "Newfoundland and Labrador",
-    "website": "https://www.sjlegends.com"
+    "website": "https://www.sjlegends.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Alberta Marlin Aquatic Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Alberta Marlin Aquatic Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Airdrie Phoenix Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/abapsc/page/home"
+    "website": "https://www.gomotionapp.com/team/abapsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Athabasca Rapids Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Barrhead Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Bonnyville Requins Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cascade Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.CascadeSwimming.com"
+    "website": "https://www.CascadeSwimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Calgary Dolphins Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://calgarydolphins.ca"
+    "website": "https://calgarydolphins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Calgary Patriots Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://cp.poolq.net"
+    "website": "https://cp.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Highwood Current Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.highwoodcurrent.ca"
+    "website": "https://www.highwoodcurrent.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Calgary Winter Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.sealions.ca"
+    "website": "https://www.sealions.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Edmonton Masters Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://edmontonmasters.org"
+    "website": "https://edmontonmasters.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Fort McMurray Mantas Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Foothills Masters Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Glencoe Gators Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://gators.poolq.net"
+    "website": "https://gators.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Grande Prairie Piranhas Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://gppiranhas.com"
+    "website": "https://gppiranhas.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Hay River Swim Club",
     "province": "NT",
     "province_name": "Northwest Territories",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Killarney Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://ksc.poolq.net"
+    "website": "https://ksc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "La Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canlasc/page/home"
+    "website": "https://www.gomotionapp.com/team/canlasc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lac La Biche Whitecaps Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lethbridge Amateur Masters Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canlasc/page/home"
+    "website": "https://www.gomotionapp.com/team/canlasc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lloydminster Riptides Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://lrsc.poolq.net"
+    "website": "https://lrsc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Okotoks Mavericks Swimming",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.okotoksmavericks.com"
+    "website": "https://www.okotoksmavericks.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Mackenzie Muskrat Swim Club",
     "province": "NT",
     "province_name": "Northwest Territories",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Calgary Nomads Masters Swimming",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Olds Rapids Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Olympian Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.olympianswimclub.com"
+    "website": "https://www.olympianswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Parkland Pirates Aquatic Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.parklandpirates.ca"
+    "website": "https://www.parklandpirates.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ponoka Pool Sharks Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canabpps/page/home"
+    "website": "https://www.gomotionapp.com/team/canabpps/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Peace River Wahoos Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Red Deer Catalina Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://Www.reddeercatalina.ca"
+    "website": "https://Www.reddeercatalina.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Bow Valley Riptides Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://riptides.ca"
+    "website": "https://riptides.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Rocky Mountain Masters Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Steadward Bears Para Swimming",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://uab.ca/tsc"
+    "website": "https://uab.ca/tsc",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Sylvan Lake Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://www.gomotionapp.com/team/cansln/page/home"
+    "website": "https://www.gomotionapp.com/team/cansln/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Special Olympics Alberta",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.specialolympics.ab.ca"
+    "website": "https://www.specialolympics.ab.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Stettler Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.stettlerswimclub.ca"
+    "website": "https://www.stettlerswimclub.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Triton Swimming",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canbs/page/home"
+    "website": "https://www.gomotionapp.com/team/canbs/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University of Alberta Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.ualberta.ca/en/campus-community-recreation/our-programs/club-sports/swim.html"
+    "website": "https://www.ualberta.ca/en/campus-community-recreation/our-programs/club-sports/swim.html",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Calgary Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://calgaryswimming.com"
+    "website": "https://calgaryswimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Calgary Varsity",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://godinos.com/swimming"
+    "website": "https://godinos.com/swimming",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Lethbridge",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://gohorns.ca"
+    "website": "https://gohorns.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Medicine Hat Waves Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Yellowknife Polar Bear Swim Club",
     "province": "NT",
     "province_name": "Northwest Territories",
-    "website": "https://www.gomotionapp.com/team/ntypbsc/page/home"
+    "website": "https://www.gomotionapp.com/team/ntypbsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Breakwater Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://breakwatermastersswimclub.com"
+    "website": "https://breakwatermastersswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Chilliwack Masters Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://chilliwackmastersswimming.com"
+    "website": "https://chilliwackmastersswimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "English Bay Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.englishbay.org"
+    "website": "https://www.englishbay.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nanaimo Ebbtides",
     "province": "",
     "province_name": "",
-    "website": "https://www.ebbtides.ca"
+    "website": "https://www.ebbtides.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "North Shore Masters",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.northshoremasters.ca"
+    "website": "https://www.northshoremasters.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Okanagan Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://okmasters.com"
+    "website": "https://okmasters.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ravensong Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Royal Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://rmswim.club"
+    "website": "https://rmswim.club",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "UBC Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.ubcmasters.com"
+    "website": "https://www.ubcmasters.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Victoria Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.victoriamasters.ca"
+    "website": "https://www.victoriamasters.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "WestShore Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://westshoremasters.ca"
+    "website": "https://westshoremasters.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Westside Thunder Masters Swim",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Yukon Graylings Masters",
     "province": "YT",
     "province_name": "Yukon",
-    "website": "https://www.yukongraylingsmasters.com"
+    "website": "https://www.yukongraylingsmasters.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Aurora Master Ducks",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://masterducks.ca"
+    "website": "https://masterducks.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Etobicoke Olympium Masters Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.eomac.ca"
+    "website": "https://www.eomac.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Granite Masters",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "North Toronto Masters",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimordie.ca"
+    "website": "https://www.swimordie.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Georgian Bay Squall",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.Georgianbaysquall.ca"
+    "website": "https://www.Georgianbaysquall.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Technosport Masters",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.technosport.ca"
+    "website": "https://www.technosport.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Moncton H2O Masters",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.mh2o.ca"
+    "website": "https://www.mh2o.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Mount Allison Mounties",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swim New Brunswick",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://swimnb.poolq.net"
+    "website": "https://swimnb.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swimming New Brunswick",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://swimnb.poolq.net"
+    "website": "https://swimnb.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "UNB Reds",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.unbswimming.ca"
+    "website": "https://www.unbswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swimming Province",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimmingclub.com"
+    "website": "https://www.swimmingclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swimming Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimmingclub.com"
+    "website": "https://www.swimmingclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Beaverlodge Barracudas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.beaverlodgebarracudas.ca"
+    "website": "https://www.beaverlodgebarracudas.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Grande Prairie Aquarians",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "High Level Stingrays",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "High Prairie Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Peace River Porpoises",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Slave Lake Sharks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Smoky River Manatees",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Spirit River Seawolves",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Valleyview Vipers",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "North Edmonton Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://nescassa.wixsite.com/nesc"
+    "website": "https://nescassa.wixsite.com/nesc",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Spruce Grove Barracudas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.sgbarracudas.ca"
+    "website": "https://www.sgbarracudas.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. Albert Sailfish",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/cansas/page/home"
+    "website": "https://www.gomotionapp.com/team/cansas/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Stony Plain Sharks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.stonyplainsharks.com"
+    "website": "https://www.stonyplainsharks.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Whitecourt Blue Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.bluedolphins.ca"
+    "website": "https://www.bluedolphins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Camrose Sea Serpents",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/abcss/page/home"
+    "website": "https://www.gomotionapp.com/team/abcss/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Fort Saskatchewan Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assapsc/page/home"
+    "website": "https://www.gomotionapp.com/team/assapsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Edmonton Huma",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.humaswimclub.com"
+    "website": "https://www.humaswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lloydminster Rebels",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/recablr/page/home"
+    "website": "https://www.gomotionapp.com/team/recablr/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Millennium Marlins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canmmssc/page/home"
+    "website": "https://www.gomotionapp.com/team/canmmssc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Vermilion Vipers",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wainwright Torpedoes",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assawtsc/page/home"
+    "website": "https://www.gomotionapp.com/team/assawtsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wetaskiwin Olympians",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.wetaskiwinolympians.com"
+    "website": "https://www.wetaskiwinolympians.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Forestburg Aquanauts",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Hanna Seals",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ponoka Gators",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.ponokagators.com"
+    "website": "https://www.ponokagators.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Red Deer Marlins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assardm/page/home"
+    "website": "https://www.gomotionapp.com/team/assardm/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Calgary Swordfish",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "http://www.calgaryswordfish.com"
+    "website": "http://www.calgaryswordfish.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Canmore Coho",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://canmorecoho.swimtopia.com"
+    "website": "https://canmorecoho.swimtopia.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cochrane Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://cochranepiranhas.ca"
+    "website": "https://cochranepiranhas.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Didsbury Aqua-Jets",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://didsburyaquajets.wixsite.com/aquajets"
+    "website": "https://didsburyaquajets.wixsite.com/aquajets",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Claresholm Kraken",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canassacksc/page/home"
+    "website": "https://www.gomotionapp.com/team/canassacksc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Crowsnest Pass Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assapass/page/home"
+    "website": "https://www.gomotionapp.com/team/assapass/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Fort MacLeod Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Medicine Hat Manta Rays",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assamhssc/page/home"
+    "website": "https://www.gomotionapp.com/team/assamhssc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nanton Marlins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.nantonmarlins.com"
+    "website": "https://www.nantonmarlins.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Pincher Creek Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Taber Vipers",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.tabervipers.com"
-  },
-  {
-    "name": "CSCA",
-    "province": "BC",
-    "province_name": "British Columbia",
-    "website": "https://www.csca.org"
+    "website": "https://www.tabervipers.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Blue Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Advent Swim Academy",
     "province": "",
     "province_name": "",
-    "website": "https://adventswim.com"
+    "website": "https://adventswim.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Hyack Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Simon Fraser University",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://athletics.sfu.ca/sports/swimming"
+    "website": "https://athletics.sfu.ca/sports/swimming",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Arbutus Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.arbutusclub.com"
+    "website": "https://www.arbutusclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Olympians Swimming",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://langleyolympians.com"
+    "website": "https://langleyolympians.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ridge Meadows Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.rmsctitans.ca"
+    "website": "https://www.rmsctitans.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Surrey Knights Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://www.surreyknights.com"
+    "website": "https://www.surreyknights.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Spartan Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.gomotionapp.com/team/canbcssc/page/home"
+    "website": "https://www.gomotionapp.com/team/canbcssc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cranbrook Tritons",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://cranbrooktritons.com"
+    "website": "https://cranbrooktritons.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Elk Valley Dolphins",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.evdsc.com"
+    "website": "https://www.evdsc.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kitimat Marlins",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.kmsc.poolq.net"
+    "website": "https://www.kmsc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Terrace Blueback Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://tbsc.poolq.net"
+    "website": "https://tbsc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kelowna Aquajets",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.kelownaaquajets.com"
+    "website": "https://www.kelownaaquajets.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "KISU Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://kisu.ca"
+    "website": "https://kisu.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Canadian Dolphin Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.canadiandolphin.ca"
+    "website": "https://www.canadiandolphin.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Chena Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://www.chenaswimclub.ca"
+    "website": "https://www.chenaswimclub.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Chinook Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://Chinook.pool.net"
+    "website": "https://Chinook.pool.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Delta Sungod Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.teamsungod.ca"
+    "website": "https://www.teamsungod.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Hollyburn Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://HST.poolq.net"
+    "website": "https://HST.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Richmond Rapids Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.richmondrapids.com"
+    "website": "https://www.richmondrapids.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swim Faster Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.swimfaster.ca"
+    "website": "https://www.swimfaster.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of British Columbia",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://gothunderbirds.ca"
+    "website": "https://gothunderbirds.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Vancouver Pacific Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://vpsc.poolq.net"
+    "website": "https://vpsc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Winskill Dolphins",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.winskilldolphins.ca"
+    "website": "https://www.winskilldolphins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wayland Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.gomotionapp.com/team/canwsc/page/home"
+    "website": "https://www.gomotionapp.com/team/canwsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Whistler Seawolves Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.whistlerseawolves.com"
+    "website": "https://www.whistlerseawolves.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Comox Valley Aquatic Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Island Swimming Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://islandswimming.com"
+    "website": "https://islandswimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ladysmith/Chemainus",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://lcsc.poolq.net"
+    "website": "https://lcsc.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nanaimo Riptides Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://nanaimoriptides.com"
+    "website": "https://nanaimoriptides.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ravensong Aquatic Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://racbreakers.com"
+    "website": "https://racbreakers.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "UVIC VIKES Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://govikesgo.com"
+    "website": "https://govikesgo.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Pacific Coast Swimming",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.pacificcoastswimming.com"
+    "website": "https://www.pacificcoastswimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "West Coast Wind",
     "province": "",
     "province_name": "",
-    "website": "https://www.westcoastwind.ca"
+    "website": "https://www.westcoastwind.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Fredericton Aquanauts Swim Team",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. Stephen Aquatic Club",
     "province": "",
     "province_name": "",
-    "website": "https://ssac.poolq.net"
+    "website": "https://ssac.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Saint John Fundy Aquatic Club",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://tide.poolq.net"
+    "website": "https://tide.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Club Campbellton Aquatika Club",
     "province": "",
     "province_name": "",
-    "website": "https://aqua.poolq.net"
+    "website": "https://aqua.poolq.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Bathurst BLAST",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.bathurstblast.ca"
+    "website": "https://www.bathurstblast.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Club de natation de Shippagan",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Les Espadons",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.lesespadons.com"
+    "website": "https://www.lesespadons.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Les Octopus Caraquet",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Natation Edmundston Swimming",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.clubnes.org"
+    "website": "https://www.clubnes.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Melfort Marlins Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://melfortmarlins.wixsite.com/mmsst"
+    "website": "https://melfortmarlins.wixsite.com/mmsst",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nipawin Lions Speed Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Prince Albert Sharks Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Yorkton Storm Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.yorktonstormswimclub.com"
+    "website": "https://www.yorktonstormswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Humboldt Hammerheads Swim Team",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Watrous Whitecaps Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Flatland Sport",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.gomotionapp.com/team/canskfs/page/home"
+    "website": "https://www.gomotionapp.com/team/canskfs/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Regina Marlins Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.reginamarlins.com/page/home"
+    "website": "https://www.reginamarlins.com/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Regina Masters Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.gomotionapp.com/team/skrmsc/page/home"
+    "website": "https://www.gomotionapp.com/team/skrmsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Regina Optimist Dolphin Swim Team",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://reginadolphins.com"
+    "website": "https://reginadolphins.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Regina Piranhas Summer Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://www.reginapiranhas.com"
+    "website": "https://www.reginapiranhas.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Regina Cougar Swimming",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://cougarsandrams.com/sports/swimming-and-diving"
+    "website": "https://cougarsandrams.com/sports/swimming-and-diving",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Battlefords Kinsmen Orcas Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.battlefordsorcas.com"
+    "website": "https://www.battlefordsorcas.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Elrose Prairie Speed Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kindersley Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Manta Ray Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Rosetown Royals Speed Swim Team",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Saskatoon Goldfins Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://goldfins.ca"
+    "website": "https://goldfins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Saskatoon Laser Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://laserswimming.ca"
+    "website": "https://laserswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Saskatoon Sharks Summer Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://saskatoonsharks.com"
+    "website": "https://saskatoonsharks.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Estevan Golden Eels Summer Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Oxbow Seawolves Aquatic Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Rocanville Tiger Sharks Summer Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Weyburn Silver Seals Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Moose Jaw Kinsmen Flying Fins",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://www.gomotionapp.com/team/canmjkff/page/home"
+    "website": "https://www.gomotionapp.com/team/canmjkff/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swift Current ACT Stingrays Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": "https://swiftcurrentstingr.wixsite.com/act-swift-stingray-1"
+    "website": "https://swiftcurrentstingr.wixsite.com/act-swift-stingray-1",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swift Current Barracudas",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ajax Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://ajaxaquaticclub.com"
+    "website": "https://ajaxaquaticclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Acton Aqua Ducks",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.actonaquaducks.ca"
+    "website": "https://www.actonaquaducks.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swim Apex Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimapex.com"
+    "website": "https://www.swimapex.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Blue Waves Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.bluewaves.club"
+    "website": "https://www.bluewaves.club",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cobra Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cancobra/page/home"
+    "website": "https://www.gomotionapp.com/team/cancobra/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Crest Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.crestswimming.ca"
+    "website": "https://www.crestswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Aurora Ducks Swimming Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canducks/page/home"
+    "website": "https://www.gomotionapp.com/team/canducks/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Etobicoke Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://eswim.ca"
+    "website": "https://eswim.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Granite Gators",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Georgina Rapids Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.georginarapids.ca"
+    "website": "https://www.georginarapids.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Halton Hills Blue Fins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.haltonhillsbluefins.com"
+    "website": "https://www.haltonhillsbluefins.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "J-Dolphins Swim School",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.jdolphins.ca"
+    "website": "https://www.jdolphins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lakeshore Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://lakeshoreswimclub.com"
+    "website": "https://lakeshoreswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Markham Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canmac/page/home"
+    "website": "https://www.gomotionapp.com/team/canmac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Markovs Aquatic Swimming Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://markovaquatics.com"
+    "website": "https://markovaquatics.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Mississauga Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://mississaugaswimming.com"
+    "website": "https://mississaugaswimming.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Northumberland Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Niki Swimming School",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "New Stars Swimming Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.newstarsswimmingclub.com/page/home"
+    "website": "https://www.newstarsswimmingclub.com/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "North York Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cannyac/page/home"
+    "website": "https://www.gomotionapp.com/team/cannyac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Oakville Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.oakvilleaquatics.ca"
-  },
-  {
-    "name": "Officials Registration ON",
-    "province": "ON",
-    "province_name": "Ontario",
-    "website": ""
+    "website": "https://www.oakvilleaquatics.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Oshawa Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canoac/page/home"
+    "website": "https://www.gomotionapp.com/team/canoac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Pickering Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.pickswimclub.com"
+    "website": "https://www.pickswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ramac Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://ramac.ca"
+    "website": "https://ramac.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Richmond Hill Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canrhac/page/home"
+    "website": "https://www.gomotionapp.com/team/canrhac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swimming Dragons",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimmingdragons.ca"
+    "website": "https://www.swimmingdragons.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Clarington Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://claringtonswimclub.org"
+    "website": "https://claringtonswimclub.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "The Dorado Stars Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://doradoswimclub.ca"
+    "website": "https://doradoswimclub.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Toronto Olympian Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.torchswim.com"
+    "website": "https://www.torchswim.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Toronto Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.torontoswimclub.com"
+    "website": "https://www.torontoswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Uxbridge Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canusc/page/home"
+    "website": "https://www.gomotionapp.com/team/canusc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Vaughan Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://vaughanaquaticclub.com"
+    "website": "https://vaughanaquaticclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Variety Village Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Whitby Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canwdsc/page/home"
+    "website": "https://www.gomotionapp.com/team/canwdsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "York Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.yorkswimclub.ca"
+    "website": "https://www.yorkswimclub.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Arnprior Blue Fish Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.arnpriorbluefish.net"
+    "website": "https://www.arnpriorbluefish.net",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Belleville Beast Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://bellevilleswimming.ca"
+    "website": "https://bellevilleswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cornwall Sea Lions",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.cornwallsealions.ca"
+    "website": "https://www.cornwallsealions.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Deep River Candu",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Greater Ottawa Kingfish Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://gokingfish.ca"
+    "website": "https://gokingfish.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Goulbourn Sea Hawks",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimgsh.ca"
+    "website": "https://www.swimgsh.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nepean Kanata Barracudas",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cannkb/page/home"
+    "website": "https://www.gomotionapp.com/team/cannkb/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Hawkesbury Orca",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ottawa Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.ottawaswimclub.ca"
+    "website": "https://www.ottawaswimclub.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ottawa Y Olympians",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.oyoswim.ca"
+    "website": "https://www.oyoswim.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Perth Stingrays Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "http://www.perthstingrays.com"
+    "website": "http://www.perthstingrays.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "ROC Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canrocs/page/home"
+    "website": "https://www.gomotionapp.com/team/canrocs/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swim Ottawa",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimottawa.ca"
+    "website": "https://www.swimottawa.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Upper Canada Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://riverotters.ca"
+    "website": "https://riverotters.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Breakers Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.breakersswimteam.com"
+    "website": "https://www.breakersswimteam.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Barrie Trojan Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.barrieswimming.ca"
+    "website": "https://www.barrieswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Orillia Channel Cats",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Lindsay Lightningbolts Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.lindsaylightningbolts.com"
+    "website": "https://www.lindsaylightningbolts.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Muskoka Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Owen Sound Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canosac/page/home"
+    "website": "https://www.gomotionapp.com/team/canosac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Peterborough Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.ptboswimclub.com"
+    "website": "https://www.ptboswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cochrane Great Whites",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kapswim",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kirkland Lake Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.klacstingrays.com"
+    "website": "https://www.klacstingrays.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "North Bay Y Titans",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cannbt/page/home"
+    "website": "https://www.gomotionapp.com/team/cannbt/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "SUDBURY LAURENTIAN SWIM CLUB",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.sudburyswimming.ca"
+    "website": "https://www.sudburyswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Sault Surge Aquatic Team",
     "province": "",
     "province_name": "",
-    "website": "https://www.gomotionapp.com/team/cannsac/page/home"
+    "website": "https://www.gomotionapp.com/team/cannsac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Temiskaming Northern Loons",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.tnlswim.com/coaches"
+    "website": "https://www.tnlswim.com/coaches",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Valley East Waves",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canvew/page/home"
+    "website": "https://www.gomotionapp.com/team/canvew/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Dryden Dolphins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://sites.google.com/view/dryden-dolphins-swim-club/home"
+    "website": "https://sites.google.com/view/dryden-dolphins-swim-club/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Nakokita Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.keeta.ca"
+    "website": "https://www.keeta.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Kenora Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.kenoraswimming.ca/home"
+    "website": "https://www.kenoraswimming.ca/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Thunder Bay Thunderbolts",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cantbt/page/home"
+    "website": "https://www.gomotionapp.com/team/cantbt/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Toronto",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.varsityblues.ca/sports/swimming"
+    "website": "https://www.varsityblues.ca/sports/swimming",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wilfrid Laurier University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "York University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://yorkulions.ca"
+    "website": "https://yorkulions.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Aylmer Optimist Arrows",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Burlington Aquatic Devilrays",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canbad/page/home"
+    "website": "https://www.gomotionapp.com/team/canbad/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Blenheim Blast",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Brock Niagara Aquatics",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.bing.com/search?pglt=41&q=brock+niagara+aquatics&cvid=bc1a91ad5d7e40278fb9ee3d43f7576d&gs_lcrp=EgZjaHJvbWUqBggBEAAYQDIGCAAQRRg5MgYIARAAGEAyBggCEAAYQDIGCAMQABhA0gEINzUyMGowajGoAgCwAgA&FORM="
+    "website": "https://www.bing.com/search?pglt=41&q=brock+niagara+aquatics&cvid=bc1a91ad5d7e40278fb9ee3d43f7576d&gs_lcrp=EgZjaHJvbWUqBggBEAAYQDIGCAAQRRg5MgYIARAAGEAyBggCEAAYQDIGCAMQABhA0gEINzUyMGowajGoAgCwAgA&FORM=",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cambridge Aquajets",
     "province": "",
     "province_name": "",
-    "website": "https://www.cambridgeaquajets.com"
+    "website": "https://www.cambridgeaquajets.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Golden Horseshoe Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.ghacswimming.ca"
+    "website": "https://www.ghacswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Ingersoll Speed Sharks",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.ingersollspeedsharks.com"
+    "website": "https://www.ingersollspeedsharks.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Killer Whale Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.kwstlondon.ca"
+    "website": "https://www.kwstlondon.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "London Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canlac/page/home"
+    "website": "https://www.gomotionapp.com/team/canlac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Middlesex Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canms/page/home"
+    "website": "https://www.gomotionapp.com/team/canms/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Norfolk Hammerheads Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/cannhac/page/home"
+    "website": "https://www.gomotionapp.com/team/cannhac/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. Clair Current Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canscc/page/home"
+    "website": "https://www.gomotionapp.com/team/canscc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St Thomas Jumbo Jets",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Wilmot Aquatic Aces",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Windsor Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.windsoraquatic.com"
+    "website": "https://www.windsoraquatic.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CADAC Les Dauphins de Rouyn-Noranda",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de l'Abitibi-Témiscamingue",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegepat.qc.ca/etudiants/astrelles-et-gaillards"
+    "website": "https://www.cegepat.qc.ca/etudiants/astrelles-et-gaillards",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAEM Club Aquatique de l'Est de Montréal",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://caem.club"
+    "website": "https://caem.club",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAFA Club aquatique Fouiqs Anjou",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAMO CAMO Natation",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAPI Club aquatique de la Pointe de l'Ile",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://destinationaquatique.org/club-competitif"
+    "website": "https://destinationaquatique.org/club-competitif",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAPN Club aquatique Les Piranhas du Nord",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.clubcapn.com"
+    "website": "https://www.clubcapn.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CASM Club Aquatique Saint-Michel",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CASO Club Aquatique du Sud-Ouest",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://caso-montreal.com/competition-natation"
+    "website": "https://caso-montreal.com/competition-natation",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CDNDG Club aquatique Côte-des-Neiges-Notre-Dame-de-Grâce",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNMN Club de natation Montréal-Nord",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://natationmontrealnord.ca"
+    "website": "https://natationmontrealnord.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MACC Maîtres à Contre-Courant",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://acontrecourant.qc.ca"
+    "website": "https://acontrecourant.qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - McGill McGill University",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.mcgill.ca/athletics"
+    "website": "https://www.mcgill.ca/athletics",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MUMS McGill Masters",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://recreation.mcgill.ca/sports-clubs/masters-swim-mums-2022"
+    "website": "https://recreation.mcgill.ca/sports-clubs/masters-swim-mums-2022",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "R2P Club aquatique Rosemont Petite-Patrie",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://clubaquatiquerpp.com"
+    "website": "https://clubaquatiquerpp.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Collège Bois-de-Boulogne",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Collège de Maisonneuve",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cmaisonneuve.qc.ca"
+    "website": "https://www.cmaisonneuve.qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep Marie-Victorin",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - UDEM Université de Montréal",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://carabins.umontreal.ca/les-carabins/honneurs"
+    "website": "https://carabins.umontreal.ca/les-carabins/honneurs",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CARE Club aquatique régional de l'Érable",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNBF Club de natation des Bois-Francs",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNSH Club de natation de St-Hyacinthe",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cnshnatation.com/accueil.aspx"
+    "website": "https://www.cnshnatation.com/accueil.aspx",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "ENC Équipe de natation Cowansville",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.encowansville.ca"
+    "website": "https://www.encowansville.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "LLOU Club de natation Les Loutres",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.lesloutres.com"
+    "website": "https://www.lesloutres.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RED Club de natation Les Requins de Drummondville",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "SHER Club de natation Sherbrooke",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "STN Sorel-Tracy Natation",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://soreltracynatation.com"
+    "website": "https://soreltracynatation.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Drummondville",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegepdrummond.ca/devenir-voltigeurs"
+    "website": "https://www.cegepdrummond.ca/devenir-voltigeurs",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Victoriaville",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNSI Club de natation Sept-Iles",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cnsi-natation.ca"
+    "website": "https://www.cnsi-natation.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "LBDF Le Boréal de Fermont",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "BG Barracudas Gaspé",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "http://www.barracudas.ca"
+    "website": "http://www.barracudas.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CENIM Club Élite de natation des Iles-de-la-Madeleine",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNM Club de natation Nautilus de Matane",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cnmatane.org"
+    "website": "https://www.cnmatane.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "EMJ Club de natation Les Espadons de Mont-Joli",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://app2.sygaction.com/emj"
+    "website": "https://app2.sygaction.com/emj",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "LSNR Club de natation Les Saumoneaux de New Richmond",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "OP Club de Natation Opti-Plus",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.natationop.com"
+    "website": "https://www.natationop.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RIKI Club de natation les Dauphins de Rimouski",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.dauphinsrimouski.com"
+    "website": "https://www.dauphinsrimouski.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Rimouski",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.sportsrimouski.com"
+    "website": "https://www.sportsrimouski.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - UOTT University Of Ottawa",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://teams.geegees.ca/sports/swim/index"
+    "website": "https://teams.geegees.ca/sports/swim/index",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "BBF Beaconsfield Bluefins",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.bluefins.ca"
+    "website": "https://www.bluefins.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNSL Club de natation Saint-Laurent",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://clubcnsl.com"
+    "website": "https://clubcnsl.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CSLA Côte St-Luc Aquatics swim team",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://swimteamcotesaintlucaquatics.com"
+    "website": "https://swimteamcotesaintlucaquatics.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "DDO Club de natation Dollard-Des-Ormeaux",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.ddoswim.com"
+    "website": "https://www.ddoswim.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MPC Maîtres-Nageurs de Pointe-Claire",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "PCSC Pointe-Claire Swim Club",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.gomotionapp.com/team/canqccapc/page/club-page"
+    "website": "https://www.gomotionapp.com/team/canqccapc/page/club-page",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "WYMN Westmount YMCA Maitres Nageurs",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAMI - Centre aquatique de Mascouche",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://centreaquatiquemascouche.com"
+    "website": "https://centreaquatiquemascouche.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNML Club de natation Mont-Laurier",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNMT Club de natation Mont-Tremblant",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.natationmont-tremblant.com"
+    "website": "https://www.natationmont-tremblant.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "GAMIN Groupe aquatique Mille-Iles Nord",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.gaminnatation.org"
+    "website": "https://www.gaminnatation.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "JET Joliette Équipe Triathlon",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://triathlonjoliette.com/le-club-jet-triathlon"
+    "website": "https://triathlonjoliette.com/le-club-jet-triathlon",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "LAVAL Équipe Aquatique Unifiée EAU Laval",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MEGO Club de natation Mégophias de Trois-Rivières",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://megophias.com"
+    "website": "https://megophias.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - UQTR Université du Québec à Trois-Rivières",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://oraprdnt.uqtr.uquebec.ca/portail/gscw031?owa_no_site=133"
+    "website": "https://oraprdnt.uqtr.uquebec.ca/portail/gscw031?owa_no_site=133",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de St-Jérôme",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cstj.qc.ca"
+    "website": "https://www.cstj.qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Shawinigan",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegepshawinigan.ca/futurs-etudiants/vie-sportive/les-electriks"
+    "website": "https://www.cegepshawinigan.ca/futurs-etudiants/vie-sportive/les-electriks",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Trois-Rivières",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegeptr.qc.ca/etudiants/diablos"
+    "website": "https://www.cegeptr.qc.ca/etudiants/diablos",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "NG Natation Gatineau",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.natationgatineau.ca"
+    "website": "https://www.natationgatineau.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAC Club Aquatique de Charlesbourg",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.natationcac.com"
+    "website": "https://www.natationcac.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MNC Maitres nageurs de la Capitale",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.mnc-qc.ca"
+    "website": "https://www.mnc-qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNQ Club de natation Région de Québec",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://cnq.club"
+    "website": "https://cnq.club",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNRB Club de natation Régional de Beauce",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MY Club de natation de Montmagny",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://natationmontmagny.com"
+    "website": "https://natationmontmagny.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RL Club de natation Les Riverains de Lévis",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.lesriverainslevis.com"
+    "website": "https://www.lesriverainslevis.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep Garneau",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://gogarneau.ca"
+    "website": "https://gogarneau.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Saint-Félicien",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://cegepstfe.ca"
+    "website": "https://cegepstfe.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Thetford",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.lesfilons.ca"
+    "website": "https://www.lesfilons.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "UL Club de natation Rouge et Or/Université Laval",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.rougeetornatation.com/fr"
+    "website": "https://www.rougeetornatation.com/fr",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "UNIK Unik Pont-Rouge",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAHB Club aquatique de la Haute-Beauce",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "NSH Club de natation Sainte-Foy Haute-Saint-Charles",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://natation-nsh.com"
+    "website": "https://natation-nsh.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "BRO La Vague de Brossard",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://vaguedebrossard.com"
+    "website": "https://vaguedebrossard.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAS Club aquatique Salaberry",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CARO Club aquatique du Roussillon",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CITA Club de natation Les Citadins de Vaudreuil",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.lescitadinsnatation.com"
+    "website": "https://www.lescitadinsnatation.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNC Club de natation Chambly",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.natationcnc.ca"
+    "website": "https://www.natationcnc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MUST Club de natation Mustang Boucherville",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://cnmustang.com"
+    "website": "https://cnmustang.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Club de natation SAMAK",
     "province": "",
     "province_name": "",
-    "website": "https://Natation-samak.org"
+    "website": "https://Natation-samak.org",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "VELOX Natation",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://clubvelox.ca"
+    "website": "https://clubvelox.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNCC Club de natation Chibougamau-Chapais",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNDM Club de natation de Dolbeau-Mistassini",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cndolbeaumistassini.com"
+    "website": "https://www.cndolbeaumistassini.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "GAMI Gami de Roberval",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Jonquière",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Brandon Bluefins Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://brandonbluefins.com"
+    "website": "https://brandonbluefins.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Central Plains Sea Lions",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Dolphins Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.dolphinsswimclubmb.ca"
+    "website": "https://www.dolphinsswimclubmb.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Manta Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.mantaswimming.ca"
+    "website": "https://www.mantaswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Manitoba Marlins",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.gomotionapp.com/team/mbmm/page/home"
+    "website": "https://www.gomotionapp.com/team/mbmm/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Para Storm Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://parastormswimming.ca"
+    "website": "https://parastormswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "St. James Seals Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.gomotionapp.com/team/cansjssc/page/home"
+    "website": "https://www.gomotionapp.com/team/cansjssc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Steinbach Skimmers Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://steinbachskimmers.com"
+    "website": "https://steinbachskimmers.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swimming Rockers Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.winnipeg.swimrockers.ca"
+    "website": "https://www.winnipeg.swimrockers.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "The Pas Roadrunners",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://tproadrunners.wixsite.com/tprr"
+    "website": "https://tproadrunners.wixsite.com/tprr",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University of Manitoba Bisons Varsity",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://gobisons.ca/sports/swimming-and-diving"
+    "website": "https://gobisons.ca/sports/swimming-and-diving",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "University Of Manitoba Bisons Swimming",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.bisonswimming.ca"
+    "website": "https://www.bisonswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Club De Natation Bleu Et Or",
     "province": "NB",
     "province_name": "New Brunswick",
-    "website": "https://www.cnbo.ca"
+    "website": "https://www.cnbo.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Sackville Swim Club",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Campus Notre-Dame-de-Foy",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cndf.qc.ca"
+    "website": "https://www.cndf.qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Sherbrooke",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegepsherbrooke.qc.ca"
+    "website": "https://www.cegepsherbrooke.qc.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Assiniboia Aquarians Swim Club",
     "province": "",
     "province_name": "",
-    "website": "https://assiniboiaaquarians.weebly.com"
+    "website": "https://assiniboiaaquarians.weebly.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Biggar Barracuda Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Shellbrook Silverfins Swim Club",
     "province": "SK",
     "province_name": "Saskatchewan",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Alpha Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.alphaswimclub.com"
+    "website": "https://www.alphaswimclub.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swan Hills Sharks Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Fast Eddies Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://sites.google.com/view/fast-eddies-swim-club?usp=sharing"
+    "website": "https://sites.google.com/view/fast-eddies-swim-club?usp=sharing",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Scarborough Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://scarswimming.ca"
+    "website": "https://scarswimming.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Rocket Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://rocketswim.com"
+    "website": "https://rocketswim.com",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "London Silver Dolphins Masters",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.londonsilverdolphins.ca/page/home"
+    "website": "https://www.londonsilverdolphins.ca/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Dragon Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.gomotionapp.com/team/dragonsc/page/home"
+    "website": "https://www.gomotionapp.com/team/dragonsc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Digby Dolphins",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CREE Mistissini Aquatics Swim Team",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNAM Club de natation de la Minganie",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CALAU Club Aquatique des Laurentides",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CAM Club Aquatique Malépart",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://ccjcm.ca"
+    "website": "https://ccjcm.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Blue Sharks Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/bssc/page/home"
+    "website": "https://www.gomotionapp.com/team/bssc/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Torpedoes Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Port Hawkesbury Antigonish Swim Team AA",
     "province": "NS",
     "province_name": "Nova Scotia",
-    "website": "https://www.gomotionapp.com/team/canphast/page/home"
+    "website": "https://www.gomotionapp.com/team/canphast/page/home",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Swordfish Sprint Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "CNPS Club de natation Phoénix Saguenay",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Rivière-du-Loup",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://www.cegeprdl.ca/etudiants-actuels/vie-sportive/les-portageurs"
+    "website": "https://www.cegeprdl.ca/etudiants-actuels/vie-sportive/les-portageurs",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - Cégep de Carleton-sur-Mer",
     "province": "QC",
     "province_name": "Quebec",
-    "website": "https://cegepgim.ca"
+    "website": "https://cegepgim.ca",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "RSEQ - UQAR Université de Rimouski",
     "province": "QC",
     "province_name": "Quebec",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Vegreville Lasers Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "MSAG Club des maitres nageurs du Saguenay",
     "province": "",
     "province_name": "",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "County Dolphins Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://findaclub.swimming.ca/"
   },
   {
     "name": "Cricket Currents Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.torontocricketclub.com"
+    "website": "https://www.torontocricketclub.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club33582-23772/"
   },
   {
     "name": "Granite Gators Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.graniteclub.com"
+    "website": "https://www.graniteclub.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club32033-16071/"
   },
   {
     "name": "Milton Marlin Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.miltonmarlins.ca"
+    "website": "https://www.miltonmarlins.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club62142-45228/"
   },
   {
     "name": "Mallards Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.mallardsswimming.com"
+    "website": "https://www.mallardsswimming.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club6127-72070/"
   },
   {
     "name": "Newmarket Stingrays Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://newmarketstingrays.org"
+    "website": "https://newmarketstingrays.org",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club52754-68441/"
   },
   {
     "name": "Pickering Swim Club Inc",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "http://www.pickswimclub.com"
+    "website": "http://www.pickswimclub.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club91181-38882/"
   },
   {
     "name": "Witchurch-Stouffville Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://stouffvilleswimclub.com"
+    "website": "https://stouffvilleswimclub.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club67097-16462/"
   },
   {
     "name": "Carleton Place Water Dragons",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.cpwd.ca"
+    "website": "https://www.cpwd.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club44980-90483/"
   },
   {
     "name": "Ernestown Barracuda Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "http://www.ernestownbarracudas.net"
+    "website": "http://www.ernestownbarracudas.net",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club28689-71193/"
   },
   {
     "name": "Nepean Kanata Barracudas Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.swimnkb.com"
+    "website": "https://www.swimnkb.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club57478-78242/"
   },
   {
     "name": "Hawkesbury ORCA Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club81224-100420/"
   },
   {
     "name": "Capital Wave",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://capitalwave.ca"
+    "website": "https://capitalwave.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club52303-3063/"
   },
   {
     "name": "The Richmond Hill Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.rhac.ca"
+    "website": "https://www.rhac.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club90127-10088/"
   },
   {
     "name": "Collingwood Clippers Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.collingwoodclippers.ca"
+    "website": "https://www.collingwoodclippers.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club58923-20117/"
   },
   {
     "name": "Hanover Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.hanoverswimclub.ca"
+    "website": "https://www.hanoverswimclub.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club64087-74127/"
   },
   {
     "name": "Cochrane Great Whites Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club31905-58759/"
   },
   {
     "name": "Timmins Marlins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://timminsmarlins.ca"
+    "website": "https://timminsmarlins.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club36411-83024/"
   },
   {
     "name": "Cyclone Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://cycloneswimclub.ca"
+    "website": "https://cycloneswimclub.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club37431-78430/"
   },
   {
     "name": "Kenora Swimming Sharks",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://kenoraswimming.ca"
+    "website": "https://kenoraswimming.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club39252-9998/"
   },
   {
     "name": "Northwest Narwhal Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.nwnarwhal.com"
+    "website": "https://www.nwnarwhal.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club81197-27027/"
   },
   {
     "name": "Kingston Blue Marlins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://swimkingston.ca"
+    "website": "https://swimkingston.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club79430-76036/"
   },
   {
     "name": "Petawawa Predators",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club29541-677/"
   },
   {
     "name": "Carleton University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club23836-2958/"
   },
   {
     "name": "Red Lake Goldfins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club19310-41992/"
   },
   {
     "name": "McMaster University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club16913-2683/"
   },
   {
     "name": "Queen's University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club60044-62835/"
   },
   {
     "name": "Orangeville Otters Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canoott/page/home"
+    "website": "https://www.gomotionapp.com/team/canoott/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club54721-35540/"
   },
   {
     "name": "Carleton University Masters Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.sce.carleton.ca/faculty/lynnmar/masters"
+    "website": "https://www.sce.carleton.ca/faculty/lynnmar/masters",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club40540-14285/"
   },
   {
     "name": "St. Clair Current",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.teamunify.com/team/canscc/page/home#:~:text=About%20Us-,St.,ability%20from%20ages%206%20%2D%2018."
+    "website": "https://www.teamunify.com/team/canscc/page/home#:~:text=About%20Us-,St.,ability%20from%20ages%206%20%2D%2018.",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club92642-103082/"
   },
   {
     "name": "Windsor-Essex Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://westswim.ca"
+    "website": "https://westswim.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club44633-103489/"
   },
   {
     "name": "University of Waterloo",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club60-3061/"
   },
   {
     "name": "Nickel City Aquatics",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.ncaswimming.ca"
+    "website": "https://www.ncaswimming.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club30937-25748/"
   },
   {
     "name": "Guelph Marlin Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.guelphmarlins.com"
+    "website": "https://www.guelphmarlins.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club4684-38646/"
   },
   {
     "name": "Ottawa Rideau Speedeaus",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.rideauspeedeaus.com"
+    "website": "https://www.rideauspeedeaus.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club74945-86873/"
   },
   {
     "name": "CHATHAM Y POOL SHARKS",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.chathampoolsharks.com"
+    "website": "https://www.chathampoolsharks.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club58607-31773/"
   },
   {
     "name": "Western University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club2487-40226/"
   },
   {
     "name": "Hamilton Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.hacswim.ca"
+    "website": "https://www.hacswim.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club26855-97048/"
   },
   {
     "name": "Huron Hurricanes Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://huronhurricanes.ca"
+    "website": "https://huronhurricanes.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club54188-63870/"
   },
   {
     "name": "Brantford Aquatic Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canbac/page/home"
+    "website": "https://www.gomotionapp.com/team/canbac/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club66118-97497/"
   },
   {
     "name": "Leamington Lasers Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.leamingtonlasers.ca"
+    "website": "https://www.leamingtonlasers.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club43482-47128/"
   },
   {
     "name": "University of Guelph",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club78834-4513/"
   },
   {
     "name": "Region of Waterloo Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.teamunify.com/team/canrwsc/page/home"
+    "website": "https://www.teamunify.com/team/canrwsc/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club99709-17968/"
   },
   {
     "name": "Thornhill Multisport",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://thornhillmultisport.com"
+    "website": "https://thornhillmultisport.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club78713-98914/"
   },
   {
     "name": "Royal City Aquatics",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://royalcityaquatics.ca"
+    "website": "https://royalcityaquatics.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club95727-99871/"
   },
   {
     "name": "Stoney Creek Aquatic Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.stoneycreekaquaticteam.com"
+    "website": "https://www.stoneycreekaquaticteam.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club50532-41646/"
   },
   {
     "name": "Sarnia Rapids Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.teamunify.com/team/onss/page/about"
+    "website": "https://www.teamunify.com/team/onss/page/about",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club14481-27894/"
   },
   {
     "name": "St. Thomas Jumbo Jets",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.stjj.ca"
+    "website": "https://www.stjj.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club97181-13603/"
   },
   {
     "name": "Wilmot Aquatic Aces Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canwaasc/page/home"
+    "website": "https://www.gomotionapp.com/team/canwaasc/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club8808-3632/"
   },
   {
     "name": "London Silver Dolphins",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club73532-28861/"
   },
   {
     "name": "Burlington Masters Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://bmsc.ca"
+    "website": "https://bmsc.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club4126-22015/"
   },
   {
     "name": "ELAC",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club25346-19509/"
   },
   {
     "name": "Brock University",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club72189-37855/"
   },
   {
     "name": "Hearst Phoenix Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club58911-18537/"
   },
   {
     "name": "Ancaster Alligator Swim Team Inc.",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.gomotionapp.com/team/canaast/page/home"
+    "website": "https://www.gomotionapp.com/team/canaast/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club55723-8121/"
   },
   {
     "name": "Club Warriors Swimming",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.teamunify.com/team/cancw/page/home"
+    "website": "https://www.teamunify.com/team/cancw/page/home",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club12975-101793/"
   },
   {
     "name": "Equipe natation Sturgeon Falls Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club64048-66684/"
   },
   {
     "name": "Orillia Channel Cats Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.orilliachannelcats.ca"
+    "website": "https://www.orilliachannelcats.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club83967-8112/"
   },
   {
     "name": "Deep River CANDU swim club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club56954-29619/"
   },
   {
     "name": "Downtown Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://dsctoronto.ca"
+    "website": "https://dsctoronto.ca",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club87888-55323/"
   },
   {
     "name": "Team Atomica Swim Team",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.teamatomica.com"
+    "website": "https://www.teamatomica.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club20210-4061/"
   },
   {
     "name": "Clarington Multisport Association",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club67257-26722/"
   },
   {
     "name": "Temiskaming Nothern Loons Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.tnlswim.com/join-tnl"
+    "website": "https://www.tnlswim.com/join-tnl",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club54886-51813/"
   },
   {
     "name": "Temiskaming Northern Loons Swim Club",
     "province": "ON",
     "province_name": "Ontario",
-    "website": "https://www.tnlswim.com"
+    "website": "https://www.tnlswim.com",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club99778-80485/"
   },
   {
     "name": "Masters NNNGU",
     "province": "ON",
     "province_name": "Ontario",
-    "website": ""
+    "website": "",
+    "source_url": "https://www.swimontario.com/clubs/find-a-club/club93245-32641/"
   },
   {
     "name": "Bulkley Valley Otters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.teamunify.com/team/bcbvo/page/home"
+    "website": "https://www.teamunify.com/team/bcbvo/page/home",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Campbell River Killer Whales",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.crkw.ca"
+    "website": "http://www.crkw.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Canadian Dolphins Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.canadiandolphin.ca"
+    "website": "http://www.canadiandolphin.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Chena Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.chenaswimclub.ca"
+    "website": "http://www.chenaswimclub.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Chetwynd Electric Eels",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Coast Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.coastswimteam.ca"
+    "website": "https://www.coastswimteam.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Columbia Shuswap Selkirks Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.selkirk-swimming.club"
+    "website": "http://www.selkirk-swimming.club",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Columbia Valley Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.columbiavalleyswim.com/index.html"
+    "website": "http://www.columbiavalleyswim.com/index.html",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Delta Retreads Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://deltamastersswimming.ca"
+    "website": "https://deltamastersswimming.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Duncan Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.duncanstingrays.com"
+    "website": "http://www.duncanstingrays.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Dynamo Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://dynamoswimclub.net"
+    "website": "https://dynamoswimclub.net",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Fort St. John Inconnu",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.inconnuswimteam.com"
+    "website": "http://www.inconnuswimteam.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Kamloops Classic Swimming",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.teamunify.com/team/cankcs/page/home"
+    "website": "https://www.teamunify.com/team/cankcs/page/home",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Kelowna Aqua Jets",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.kelownaaquajets.com"
+    "website": "http://www.kelownaaquajets.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Killarney Gators Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.gatorswimclub.ca"
+    "website": "http://www.gatorswimclub.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Kitimat Marlins Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.teamunify.com/Home.jsp?team=bckmsc"
+    "website": "https://www.teamunify.com/Home.jsp?team=bckmsc",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Kootenay Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.thekootenayswimclub.com"
+    "website": "http://www.thekootenayswimclub.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Legacy Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://legacyswim.club"
+    "website": "https://legacyswim.club",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Nanaimo Ebbtides Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://ebbtides.ca"
+    "website": "https://ebbtides.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Olympians Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.langleyolympians.com"
+    "website": "https://www.langleyolympians.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Pacific Sea Wolves",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.pacificseawolves.com"
+    "website": "http://www.pacificseawolves.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Percy Norman Wave Masters",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.percynormanmastersswim.com"
+    "website": "https://www.percynormanmastersswim.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Port Alberni Tsunami",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.tsunamiswimming.ca"
+    "website": "http://www.tsunamiswimming.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Prince George Barracudas",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.pgbsc.org"
+    "website": "http://www.pgbsc.org",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Prince Rupert Amateur Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.teamunify.com/Home.jsp?team=canprasc"
+    "website": "https://www.teamunify.com/Home.jsp?team=canprasc",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Salmon Arm Waves Masters Swimming Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.salmonarmwaves.ca"
+    "website": "https://www.salmonarmwaves.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Simon Fraser Aquatics",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.simonfraseraquatics.com"
+    "website": "http://www.simonfraseraquatics.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Spirit Orcas Community Inclusion Projects",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://spiritorcas.ca"
+    "website": "https://spiritorcas.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Squamish Pirates Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.squamishpirates.com"
+    "website": "http://www.squamishpirates.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Summerland Orca Masters",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Summerland Orca Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://orcaswimclub.net"
+    "website": "http://orcaswimclub.net",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Swim Faster Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.swimfaster.ca"
+    "website": "http://www.swimfaster.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "University of Victoria Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.vikes.uvic.ca"
+    "website": "http://www.vikes.uvic.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Vancouver Pacemakers Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Vernon Kokanee Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.kokaneeswimclub.ca"
+    "website": "http://www.kokaneeswimclub.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Vernon Masters Swim Team",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Waveriders Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.quesnelwaveriders.ca"
+    "website": "http://www.quesnelwaveriders.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "West Vancouver Otters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.westvancouverotters.ca"
+    "website": "http://www.westvancouverotters.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "White Rock Wave",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.whiterockwave.com"
+    "website": "https://www.whiterockwave.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Whitehorse Glacier Bears",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.whitehorseglacierbears.ca"
+    "website": "http://www.whitehorseglacierbears.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Williams Lake Blue Fins",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "http://www.wlbluefins.ca"
+    "website": "http://www.wlbluefins.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Winskill Dolphins Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://www.winskildolphins.ca"
+    "website": "https://www.winskildolphins.ca",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Winskill Otters Master Swim club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": "https://winskilotters.com"
+    "website": "https://winskilotters.com",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Yukon Graylings Masters Swim Club",
     "province": "BC",
     "province_name": "British Columbia",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimbc.ca/clubs/how-to-join-a-swim-club/"
   },
   {
     "name": "Bonnyville Requins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Bow Valley Riptides",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/Riptides/page/home"
+    "website": "https://www.gomotionapp.com/team/Riptides/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Canadian Badlands Aquatic Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/cancbac/page/home"
+    "website": "https://www.gomotionapp.com/team/cancbac/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Cochrane Comets",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/cancocsc/page/home"
+    "website": "https://www.gomotionapp.com/team/cancocsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Cold Lake Marlins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Edmonton Keyano Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.eksc.com"
+    "website": "https://www.eksc.com",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Edson Orcas Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.edsonorcaswim.ca"
+    "website": "https://www.edsonorcaswim.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Fort McMurray Mantas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canfmmsc/page/home"
+    "website": "https://www.gomotionapp.com/team/canfmmsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Grande Cache Otters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/abgco/page/home"
+    "website": "https://www.gomotionapp.com/team/abgco/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Grande Prairie Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/cangppsc/page/home"
+    "website": "https://www.gomotionapp.com/team/cangppsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Lac La Biche Whitecaps",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Medicine Hat Waves",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canmhwsc/page/home"
+    "website": "https://www.gomotionapp.com/team/canmhwsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Nose Creek Swim Association",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canncsa/page/home"
+    "website": "https://www.gomotionapp.com/team/canncsa/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Okotoks Mavericks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canfssc/page/home"
+    "website": "https://www.gomotionapp.com/team/canfssc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Rocky Barracuda Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "St.Paul Barracudas Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Steadward Bears",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/scuoa/page/home"
+    "website": "https://www.gomotionapp.com/team/scuoa/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Strathcona County Silver Rays",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/canabspsc/page/home"
+    "website": "https://www.gomotionapp.com/team/canabspsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Strathmore Silver Sharks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/cansss/page/home"
+    "website": "https://www.gomotionapp.com/team/cansss/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "University of Alberta Varsity",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://bearsandpandas.ca/sports/swimming-and-diving"
+    "website": "https://bearsandpandas.ca/sports/swimming-and-diving",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "University of Lethbridge Varsity",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://gohorns.com"
+    "website": "https://gohorns.com",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Calgary Masters Swim Club",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://cmsc.ab.ca"
+    "website": "https://cmsc.ab.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Calgary Nomads",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Cochrane Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://cmsc.poolq.net"
+    "website": "https://cmsc.poolq.net",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Different Strokes",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.differentstrokescalgary.org"
+    "website": "https://www.differentstrokescalgary.org",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Fast Eddie’s Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Foothills Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://fmsc.ca"
+    "website": "https://fmsc.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Making Waves",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.makingwavesyeg.ca/swimming"
+    "website": "https://www.makingwavesyeg.ca/swimming",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Okotoks Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://okotoksmasters.com"
+    "website": "https://okotoksmasters.com",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Peace River Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://peaceriverswimming.org"
+    "website": "https://peaceriverswimming.org",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Red Deer Silver Sharks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.reddeermastersswimclub.com"
+    "website": "https://www.reddeermastersswimclub.com",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Rocky Mountain Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Strathmore Silver Sharks Masters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.teamunify.com/team/cansss/page/home"
+    "website": "https://www.teamunify.com/team/cansss/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Brooks Barracudas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Calgary Tritons",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://calgarytritons.ca"
+    "website": "https://calgarytritons.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Castor Tritons",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Derrick Devil-Rays",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Devon Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assaddsc/page/home"
+    "website": "https://www.gomotionapp.com/team/assaddsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Drayton Valley Neptunes",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Fairview Olympians",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Fort MacLeod Sharks",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Ft Saskatchewan Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.teamunify.com/team/assapsc/page/home"
+    "website": "https://www.teamunify.com/team/assapsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Grimshaw Gators",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "High River Otters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://highriverotters.swimtopia.com"
+    "website": "https://highriverotters.swimtopia.com",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Hinton Water Devils",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.hintonwaterdevils.ca/page/home"
+    "website": "https://www.hintonwaterdevils.ca/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Innisfail Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.teamunify.com/Home.jsp?team=canid"
+    "website": "https://www.teamunify.com/Home.jsp?team=canid",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Killam Cyclones",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assakcsc/page/home"
+    "website": "https://www.gomotionapp.com/team/assakcsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Lacombe Dolphins",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "http://www.lacombedolphinswimclub.ca"
+    "website": "http://www.lacombedolphinswimclub.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Lethbridge Orcas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/recassalorcas/page/home"
+    "website": "https://www.gomotionapp.com/team/recassalorcas/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Okotoks Stingrays",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Oyen Otters",
     "province": "AB",
     "province_name": "Alberta",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Provost Piranhas",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "http://provostpiranhas.ca"
+    "website": "http://provostpiranhas.ca",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Westlock Gators",
     "province": "AB",
     "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assawgsc/page/home"
+    "website": "https://www.gomotionapp.com/team/assawgsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
     "name": "Alpha Aquatic Club Inc.",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Beausejour Otters",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Hamiota Red Fins",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://hamiota.com/hamiota-aquatic-centre"
+    "website": "https://hamiota.com/hamiota-aquatic-centre",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Manitoba Marlins Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "http://www.manitobamarlins.com"
+    "website": "http://www.manitobamarlins.com",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Manitoba Masters Aquatic Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "http://www.mmac.mb.ca"
+    "website": "http://www.mmac.mb.ca",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Manitou Stingrays",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://www.pembina.ca/m/manitou-community-pool/swim-team"
+    "website": "https://www.pembina.ca/m/manitou-community-pool/swim-team",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Neepawa Blue Dolphins",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Parkland Gators Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Pilot Mound Piranhas",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "http://www.louisemb.com/p/louise-recreation-district"
+    "website": "http://www.louisemb.com/p/louise-recreation-district",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "St James Seals Swim Club",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "http://www.stjamesseals.com"
+    "website": "http://www.stjamesseals.com",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Swan Valley Rapids",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Swimming Rockers Club Winnipeg",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "http://www.swimrockers.ca"
+    "website": "http://www.swimrockers.ca",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Treherne Tiger Sharks",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "University of Manitoba Bisons Varsity Team",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": "https://gobisons.ca"
+    "website": "https://gobisons.ca",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   },
   {
     "name": "Winkler Barracudas",
     "province": "MB",
     "province_name": "Manitoba",
-    "website": ""
+    "website": "",
+    "source_url": "https://swimmanitoba.mb.ca/clubs/"
   }
 ]

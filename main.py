@@ -49,7 +49,7 @@ RUN_INFO_MD = OUTPUT_DIR / "RUN_INFO.md"
 # republishing address-level data from the Swimming Canada directory.
 _OUTPUT_FIELDS = [
     "name", "province", "province_name",
-    "website", "software", "category", "final_url", "error",
+    "website", "software", "category", "final_url", "error", "source_url",
 ]
 
 
