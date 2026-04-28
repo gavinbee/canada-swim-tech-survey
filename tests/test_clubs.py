@@ -169,3 +169,56 @@ class TestFetchAllClubs:
         mock_path.exists.return_value = False
         clubs = fetch_all_clubs(force_refresh=True)
         assert clubs == []
+
+
+class TestExclusions:
+    """Excluded entries must be absent from both the returned list and the saved snapshot."""
+
+    _CSCA = {
+        "name": "CSCA",
+        "address": "100 Main St V5K 0A1",
+        "website": "https://www.csca.org",
+        "phone": "", "lat": "", "lng": "", "category": "", "type": "",
+    }
+    _OFFICIALS = {
+        "name": "Officials Registration ON",
+        "address": "200 King St M5V 2T6",
+        "website": "",
+        "phone": "", "lat": "", "lng": "", "category": "", "type": "",
+    }
+    _REAL_CLUB = {
+        "name": "Real Swim Club",
+        "address": "300 Elm St T5J 1W2",
+        "website": "https://realswimclub.ca",
+        "phone": "", "lat": "", "lng": "", "category": "", "type": "",
+    }
+
+    def _make_response(self, clubs):
+        mock = MagicMock()
+        mock.raise_for_status = MagicMock()
+        mock.text = "load_clubs(" + json.dumps(clubs) + ")"
+        return mock
+
+    @patch("src.clubs.requests.get")
+    def test_excluded_website_not_returned(self, mock_get):
+        mock_get.return_value = self._make_response([self._CSCA, self._REAL_CLUB])
+        clubs = fetch_all_clubs(force_refresh=True)
+        assert not any(c["website"] == "https://www.csca.org" for c in clubs)
+        assert any(c["name"] == "Real Swim Club" for c in clubs)
+
+    @patch("src.clubs.requests.get")
+    def test_excluded_name_not_returned(self, mock_get):
+        mock_get.return_value = self._make_response([self._OFFICIALS, self._REAL_CLUB])
+        clubs = fetch_all_clubs(force_refresh=True)
+        assert not any(c["name"] == "Officials Registration ON" for c in clubs)
+        assert any(c["name"] == "Real Swim Club" for c in clubs)
+
+    @patch("src.clubs.requests.get")
+    def test_excluded_not_saved_to_snapshot(self, mock_get, monkeypatch):
+        """Regression guard: _filter_clubs must run before _save_snapshot."""
+        saved = []
+        monkeypatch.setattr("src.clubs._save_snapshot", lambda clubs: saved.extend(clubs))
+        mock_get.return_value = self._make_response([self._CSCA, self._OFFICIALS, self._REAL_CLUB])
+        fetch_all_clubs(force_refresh=True)
+        assert not any(c["website"] == "https://www.csca.org" for c in saved)
+        assert not any(c["name"] == "Officials Registration ON" for c in saved)

@@ -94,6 +94,16 @@ def _city_from_address(address):
 
 SNAPSHOT_PATH = Path(__file__).parent.parent / "data" / "clubs.json"
 
+# Websites and names that belong to governing bodies, officials registrations,
+# or other non-club entries. Extend these sets when new non-club entries appear.
+_EXCLUDED_WEBSITES = {
+    "https://www.csca.org",  # Canadian Swimming Coaches Association — not a club
+}
+
+_EXCLUDED_NAMES = {
+    "Officials Registration ON",  # Swim Ontario officials registration — not a club
+}
+
 # Provincial sources: (province_code, scraper_type, url)
 # scraper_type: "gatsby_json" | "html_table_bc" | "html_table_mb" | "html_divs_ab"
 _PROVINCIAL_SOURCES = [
@@ -119,20 +129,34 @@ def fetch_all_clubs(force_refresh=False):
     snapshot and always hit the live APIs, then save a new snapshot.
     """
     if not force_refresh and SNAPSHOT_PATH.exists():
-        return _load_snapshot()
+        return _filter_clubs(_load_snapshot())
 
     clubs = _fetch_live()
     if clubs:
         clubs = _merge_provincial(clubs)
+        clubs = _filter_clubs(clubs)
         _save_snapshot(clubs)
         return clubs
 
     # Live fetch failed — fall back to snapshot
     if SNAPSHOT_PATH.exists():
         log.warning("Live fetch failed; using committed snapshot %s", SNAPSHOT_PATH)
-        return _load_snapshot()
+        return _filter_clubs(_load_snapshot())
 
     return []
+
+
+def _filter_clubs(clubs):
+    """Remove known non-club entries (governing bodies, officials registrations, etc.)."""
+    filtered = [
+        c for c in clubs
+        if c.get("website", "") not in _EXCLUDED_WEBSITES
+        and c.get("name", "") not in _EXCLUDED_NAMES
+    ]
+    removed = len(clubs) - len(filtered)
+    if removed:
+        log.info("Excluded %d non-club entries", removed)
+    return filtered
 
 
 def _normalise_website(url):
@@ -185,25 +209,28 @@ def _fetch_provincial(province, scraper, url):
     if scraper == "gatsby_json":
         return _parse_gatsby_json(province, r)
     if scraper == "html_table_bc":
-        return _parse_bc_table(province, r)
+        return _parse_bc_table(province, r, source_url=url)
     if scraper == "html_table_mb":
-        return _parse_mb_table(province, r)
+        return _parse_mb_table(province, r, source_url=url)
     if scraper == "html_divs_ab":
-        return _parse_ab_divs(province, r)
+        return _parse_ab_divs(province, r, source_url=url)
 
     log.warning("Unknown provincial scraper type: %s", scraper)
     return []
 
 
-def _make_club(name, website, province, postal=""):
+def _make_club(name, website, province, postal="", source_url=""):
     prov = _province_from_address(postal) or province
     return {
         "name": name,
         "province": prov,
         "province_name": PROVINCE_NAMES.get(prov, prov),
         "website": _normalise_website(website),
-        "source": f"provincial_{province.lower()}",
+        "source_url": source_url,
     }
+
+
+_SWIMONTARIO_BASE = "https://www.swimontario.com/clubs/find-a-club/"
 
 
 def _parse_gatsby_json(province, r):
@@ -216,14 +243,16 @@ def _parse_gatsby_json(province, r):
     clubs = []
     for item in children:
         name = (item.get("name") or "").strip()
+        slug = (item.get("slug") or "").strip()
+        source_url = f"{_SWIMONTARIO_BASE}{slug}/" if slug else _SWIMONTARIO_BASE
         if name:
             clubs.append(_make_club(name, item.get("website") or "", province,
-                                    item.get("postalcode") or ""))
+                                    item.get("postalcode") or "", source_url=source_url))
     log.info("Fetched %d clubs from Gatsby JSON (%s)", len(clubs), province)
     return clubs
 
 
-def _parse_bc_table(province, r):
+def _parse_bc_table(province, r, source_url=""):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     table = soup.find("table")
@@ -240,12 +269,13 @@ def _parse_bc_table(province, r):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province))
+            clubs.append(_make_club(name, links[0] if links else "", province,
+                                    source_url=source_url))
     log.info("Fetched %d clubs from BC table", len(clubs))
     return clubs
 
 
-def _parse_mb_table(province, r):
+def _parse_mb_table(province, r, source_url=""):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     table = soup.find("table")
@@ -262,12 +292,13 @@ def _parse_mb_table(province, r):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province))
+            clubs.append(_make_club(name, links[0] if links else "", province,
+                                    source_url=source_url))
     log.info("Fetched %d clubs from MB table", len(clubs))
     return clubs
 
 
-def _parse_ab_divs(province, r):
+def _parse_ab_divs(province, r, source_url=""):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     clubs = []
@@ -279,7 +310,8 @@ def _parse_ab_divs(province, r):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"] and "swimalberta" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province))
+            clubs.append(_make_club(name, links[0] if links else "", province,
+                                    source_url=source_url))
     log.info("Fetched %d clubs from AB divs", len(clubs))
     return clubs
 
@@ -330,7 +362,7 @@ def _fetch_live():
             "province": province,
             "province_name": PROVINCE_NAMES.get(province, province),
             "website": website_clean,
-            "source": "swimming_canada_api",
+            "source_url": "https://findaclub.swimming.ca/",
         })
 
     log.info("Fetched %d clubs live (%d with websites)", len(clubs),
@@ -349,7 +381,8 @@ def _save_snapshot(clubs):
     SNAPSHOT_PATH.parent.mkdir(exist_ok=True)
     snapshot = [
         {"name": c["name"], "province": c["province"],
-         "province_name": c["province_name"], "website": c["website"]}
+         "province_name": c["province_name"], "website": c["website"],
+         "source_url": c.get("source_url", "")}
         for c in clubs
     ]
     with open(SNAPSHOT_PATH, "w", encoding="utf-8") as f:

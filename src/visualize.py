@@ -13,6 +13,7 @@ Charts produced:
 import json
 import math
 import os
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -273,20 +274,46 @@ new Chart(document.getElementById('{cid}'), {cfg});
 """
 
 
+# Maps URL domain patterns to short source labels shown in the HTML table.
+_SOURCE_LABELS = [
+    (re.compile(r"swimontario\.com",   re.I), "Swim ON"),
+    (re.compile(r"swimbc\.ca",         re.I), "Swim BC"),
+    (re.compile(r"swimalberta\.ca",    re.I), "Swim AB"),
+    (re.compile(r"swimmanitoba\.mb\.ca", re.I), "Swim MB"),
+    (re.compile(r"swimming\.ca|findaclub\.swimming\.ca", re.I), "Swimming CA"),
+]
+
+
+def _source_cell(url):
+    """Return a <td> for the source_url column: a short linked label."""
+    url = str(url) if pd.notna(url) else ""
+    if not url:
+        return "<td></td>"
+    label = url  # fallback: show raw URL
+    for pattern, name in _SOURCE_LABELS:
+        if pattern.search(url):
+            label = name
+            break
+    return f'<td><a href="{url}" target="_blank" rel="noreferrer">{label}</a></td>'
+
+
 def _table_html(df):
-    cols = ["name", "province", "software", "category", "website", "final_url"]
+    cols = ["name", "province", "software", "category", "website", "final_url", "source_url"]
     cols = [c for c in cols if c in df.columns]
     rows = []
     for _, r in df.iterrows():
         cells = []
         for c in cols:
             v = r.get(c, "")
-            if c in ("website", "final_url") and v and str(v).startswith("http"):
+            if c == "source_url":
+                cells.append(_source_cell(v))
+            elif c in ("website", "final_url") and v and str(v).startswith("http"):
                 cells.append(f'<td><a href="{v}" target="_blank" rel="noreferrer">{v[:60]}</a></td>')
             else:
                 cells.append(f"<td>{v if pd.notna(v) else ''}</td>")
         rows.append("<tr>" + "".join(cells) + "</tr>")
-    header = "".join(f"<th>{c}</th>" for c in cols)
+    col_headers = [c if c != "source_url" else "source" for c in cols]
+    header = "".join(f"<th>{c}</th>" for c in col_headers)
     return f"""
 <div class="table-wrap">
 <input type="text" id="tableSearch" placeholder="Search clubs…" oninput="filterTable()" />
