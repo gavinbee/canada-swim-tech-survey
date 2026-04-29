@@ -1,1 +1,13 @@
-{}
+{
+  "Aqua Aces Swim Clun": {
+    "action": "rename",
+    "to": "Aqua Aces Swim Club"
+  },
+  "Cambridge Aquajets": {
+    "action": "keep"
+  },
+  "Windsor Aquatic ClubWA": {
+    "action": "rename",
+    "to": "Windsor Aquatic Club"
+  }
+}
