@@ -161,22 +161,35 @@ Each key is the original scraped name; each value is one of:
 { "action": "skip" }
 ```
 
-### Interactive runs (`--refresh-clubs` in a terminal)
+### Updating the club list when suspects are found
 
-When a suspect name has no saved resolution the operator is prompted:
-- **(k) keep** — saves `{"action": "keep"}` and continues
-- **(c) correct** — prompts for the corrected name, saves `{"action": "rename", …}`
-- **(s) skip** — saves `{"action": "skip"}` and omits the club
+Three workflows are supported:
 
-The choice is written to the file immediately so partial progress survives interruptions.
+**Interactive** — run `--refresh-clubs` in a real terminal.  Each suspect is
+presented with a prompt; the choice is written to `name_resolutions.json`
+immediately and `clubs.json` is updated at the end.
 
-### Non-interactive runs (e.g. GitHub Actions)
+**Two-stage non-interactive** (Claude-friendly, also scriptable):
 
-If a suspect name has no saved resolution, the club is skipped and the name is
-collected. After all clubs are parsed, `fetch_all_clubs` raises
-`UnresolvedSuspectError`, which causes `main.py` to exit with code 2, failing
-the workflow. To resolve: run `--refresh-clubs` locally (interactive terminal),
-then commit both `data/name_resolutions.json` and the updated `data/clubs.json`.
+```bash
+# Stage 1 — re-scrape; suspects go to data/clubs_suspects.json, not a prompt
+python main.py --detect-suspects
+
+# (resolve each suspect: edit data/name_resolutions.json or let Claude prompt you)
+
+# Stage 2 — merge resolved suspects into data/clubs.json; no re-scraping
+python main.py --apply-suspects
+```
+
+`--apply-suspects` reads each record from `clubs_suspects.json`, looks up
+the saved resolution in `name_resolutions.json`, and merges the resolved club
+directly into `clubs.json` (deduplicating on name and website).  On success it
+deletes `clubs_suspects.json`.
+
+**CI / GitHub Actions** — `--refresh-clubs` with no TTY exits with code 2 if
+any unresolved suspects remain after the scrape, failing the workflow visibly.
+Commit `name_resolutions.json` alongside `clubs.json` so CI can apply all saved
+resolutions automatically on subsequent runs.
 
 ### Vocabulary design
 

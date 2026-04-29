@@ -12,6 +12,13 @@ Steps:
   4. Save enriched results to data/results.csv
   5. Generate output/report.html with Chart.js visualisations
   6. Write output/RUN_INFO.md with execution timestamp and summary stats
+
+Club-list management flags (do not run the full survey):
+    --refresh-clubs     Re-fetch live; prompt interactively for any name suspects
+    --detect-suspects   Re-fetch live; save suspect names to data/clubs_suspects.json
+                        instead of prompting (non-interactive / Claude-friendly)
+    --apply-suspects    Merge resolved suspects from data/clubs_suspects.json into
+                        data/clubs.json using saved data/name_resolutions.json
 """
 
 import argparse
@@ -26,7 +33,7 @@ from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
 
-from src.clubs import fetch_all_clubs
+from src.clubs import apply_suspects, fetch_all_clubs
 from src.name_resolution import UnresolvedSuspectError
 from src.classify import reclassify
 from src.detector import detect
@@ -124,9 +131,28 @@ def _write_run_info(df, ran_at):
     log.info("Run info → %s", RUN_INFO_MD)
 
 
-def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False):
+def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False,
+        detect_suspects_mode=False, apply_suspects_mode=False):
     OUTPUT_DIR.mkdir(exist_ok=True)
     DATA_DIR.mkdir(exist_ok=True)
+
+    # ----------------------------------------------------------------
+    # Club-list management modes — fetch/update clubs.json then exit
+    # ----------------------------------------------------------------
+    if apply_suspects_mode:
+        log.info("=== Applying resolved suspects to data/clubs.json ===")
+        added = apply_suspects()
+        if added:
+            log.info("Done. %d club(s) added — commit data/clubs.json and data/name_resolutions.json.", added)
+        else:
+            log.info("Done. No new clubs added (all suspects were skipped or already present).")
+        return
+
+    if detect_suspects_mode:
+        log.info("=== Step 1: Re-fetching club list (detect-suspects mode) ===")
+        fetch_all_clubs(force_refresh=True, detect_suspects=True)
+        return
+
     ran_at = datetime.now(timezone.utc)
 
     # ----------------------------------------------------------------
@@ -138,8 +164,8 @@ def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False):
     except UnresolvedSuspectError as exc:
         log.error(
             "Club refresh halted: %d club name(s) had suspected typos with no saved "
-            "resolution: %s. Run --refresh-clubs locally (interactive terminal) to "
-            "resolve them, then commit data/name_resolutions.json alongside data/clubs.json.",
+            "resolution: %s. Run --detect-suspects to save suspects, then resolve them "
+            "and run --apply-suspects; or run --refresh-clubs in an interactive terminal.",
             len(exc.names), exc.names,
         )
         sys.exit(2)
@@ -221,7 +247,18 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--refresh-clubs", action="store_true",
-        help="Re-fetch the club list from Swimming Canada and update data/clubs.json"
+        help="Re-fetch the club list from all sources and update data/clubs.json; "
+             "prompts interactively for any suspected name typos"
+    )
+    parser.add_argument(
+        "--detect-suspects", action="store_true",
+        help="Re-fetch the club list; save unresolved name suspects to "
+             "data/clubs_suspects.json instead of prompting (non-interactive)"
+    )
+    parser.add_argument(
+        "--apply-suspects", action="store_true",
+        help="Merge resolved suspects from data/clubs_suspects.json into data/clubs.json "
+             "using saved data/name_resolutions.json; no re-scraping"
     )
     args = parser.parse_args()
 
@@ -230,4 +267,6 @@ if __name__ == "__main__":
         use_cache=not args.no_cache,
         extra_delay=args.delay,
         refresh_clubs=args.refresh_clubs,
+        detect_suspects_mode=args.detect_suspects,
+        apply_suspects_mode=args.apply_suspects,
     )

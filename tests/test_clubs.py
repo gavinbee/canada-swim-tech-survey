@@ -8,8 +8,10 @@ import pytest
 
 from src.clubs import (
     _city_from_address,
+    _make_club,
     _parse_nl_pdfs,
     _province_from_address,
+    apply_suspects,
     fetch_all_clubs,
 )
 
@@ -321,3 +323,147 @@ class TestParseNlPdfs:
         clubs = self._call_parse()
         for c in clubs:
             assert c["source_url"] == "https://swimmingnl.ca/directory"
+
+
+class TestDetectSuspectsMode:
+    """_make_club with suspects_out captures unresolved suspects as full records."""
+
+    def test_suspect_saved_to_suspects_out(self, tmp_path, monkeypatch):
+        res_file = tmp_path / "name_resolutions.json"
+        res_file.write_text("{}", encoding="utf-8")
+        monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
+        monkeypatch.setattr("sys.stdin", MagicMock(isatty=lambda: False))
+
+        suspects_out = []
+        result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
+                             suspects_out=suspects_out)
+        assert result is None
+        assert len(suspects_out) == 1
+        assert suspects_out[0]["name"] == "Aqua Aces Swim Clun"
+        assert suspects_out[0]["website"] == "https://aquaaces.ca"
+        assert suspects_out[0]["province"] == "NL"
+
+    def test_saved_skip_not_added_to_suspects_out(self, tmp_path, monkeypatch):
+        resolutions = {"Aqua Aces Swim Clun": {"action": "skip"}}
+        res_file = tmp_path / "name_resolutions.json"
+        res_file.write_text(json.dumps(resolutions), encoding="utf-8")
+        monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
+
+        suspects_out = []
+        result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
+                             suspects_out=suspects_out)
+        assert result is None
+        assert suspects_out == []  # saved skip, not an unresolved suspect
+
+    def test_no_suspects_out_when_none(self, tmp_path, monkeypatch):
+        res_file = tmp_path / "name_resolutions.json"
+        res_file.write_text("{}", encoding="utf-8")
+        monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
+        monkeypatch.setattr("sys.stdin", MagicMock(isatty=lambda: False))
+
+        # suspects_out=None means detect mode is off — no record saved, just skip
+        result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
+                             suspects_out=None)
+        assert result is None
+
+
+class TestApplySuspects:
+    """apply_suspects merges resolved clubs from clubs_suspects.json into clubs.json."""
+
+    _EXISTING = [{"name": "Existing Club", "province": "ON",
+                  "province_name": "Ontario", "website": "https://existing.ca",
+                  "source_url": "https://findaclub.swimming.ca/"}]
+    _SUSPECT = {"name": "Aqua Aces Swim Clun", "province": "NL",
+                "province_name": "Newfoundland and Labrador",
+                "website": "https://aquaaces.ca", "source_url": "https://swimmingnl.ca/directory"}
+
+    def _setup(self, tmp_path, monkeypatch, suspects, resolutions, existing=None):
+        suspects_file = tmp_path / "clubs_suspects.json"
+        suspects_file.write_text(json.dumps(suspects), encoding="utf-8")
+        monkeypatch.setattr("src.clubs.SUSPECTS_PATH", suspects_file)
+
+        res_file = tmp_path / "name_resolutions.json"
+        res_file.write_text(json.dumps(resolutions), encoding="utf-8")
+        monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
+
+        snapshot_file = tmp_path / "clubs.json"
+        snapshot_file.write_text(json.dumps(existing or self._EXISTING), encoding="utf-8")
+        monkeypatch.setattr("src.clubs.SNAPSHOT_PATH", snapshot_file)
+
+        # Override the autouse no_snapshot_writes fixture so apply_suspects can save
+        monkeypatch.setattr("src.clubs._save_snapshot", lambda clubs: snapshot_file.write_text(
+            json.dumps([{"name": c["name"], "province": c["province"],
+                         "province_name": c["province_name"], "website": c["website"],
+                         "source_url": c.get("source_url", "")} for c in clubs],
+                       indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        ))
+        return snapshot_file
+
+    def test_rename_adds_corrected_club(self, tmp_path, monkeypatch):
+        resolutions = {"Aqua Aces Swim Clun": {"action": "rename", "to": "Aqua Aces Swim Club"}}
+        snapshot_file = self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions)
+
+        added = apply_suspects()
+
+        assert added == 1
+        saved = json.loads(snapshot_file.read_text())
+        names = [c["name"] for c in saved]
+        assert "Aqua Aces Swim Club" in names
+        assert "Aqua Aces Swim Clun" not in names
+
+    def test_keep_adds_original_name(self, tmp_path, monkeypatch):
+        resolutions = {"Aqua Aces Swim Clun": {"action": "keep"}}
+        snapshot_file = self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions)
+
+        added = apply_suspects()
+
+        assert added == 1
+        saved = json.loads(snapshot_file.read_text())
+        assert any(c["name"] == "Aqua Aces Swim Clun" for c in saved)
+
+    def test_skip_discards_club(self, tmp_path, monkeypatch):
+        resolutions = {"Aqua Aces Swim Clun": {"action": "skip"}}
+        snapshot_file = self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions)
+
+        added = apply_suspects()
+
+        assert added == 0
+        saved = json.loads(snapshot_file.read_text())
+        assert not any("Aqua Aces" in c["name"] for c in saved)
+
+    def test_no_suspects_file_returns_zero(self, tmp_path, monkeypatch):
+        suspects_file = tmp_path / "clubs_suspects.json"
+        monkeypatch.setattr("src.clubs.SUSPECTS_PATH", suspects_file)
+        assert apply_suspects() == 0
+
+    def test_suspects_file_deleted_after_apply(self, tmp_path, monkeypatch):
+        resolutions = {"Aqua Aces Swim Clun": {"action": "skip"}}
+        snapshot_file = self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions)
+        suspects_file = tmp_path / "clubs_suspects.json"
+
+        apply_suspects()
+
+        assert not suspects_file.exists()
+
+    def test_deduplication_by_name(self, tmp_path, monkeypatch):
+        existing_with_club = self._EXISTING + [
+            {"name": "Aqua Aces Swim Club", "province": "NL",
+             "province_name": "Newfoundland and Labrador",
+             "website": "", "source_url": ""}
+        ]
+        resolutions = {"Aqua Aces Swim Clun": {"action": "rename", "to": "Aqua Aces Swim Club"}}
+        self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions, existing=existing_with_club)
+
+        added = apply_suspects()
+        assert added == 0  # already present under the resolved name
+
+    def test_unresolved_suspect_skipped_with_warning(self, tmp_path, monkeypatch, caplog):
+        snapshot_file = self._setup(tmp_path, monkeypatch, [self._SUSPECT], resolutions={})
+
+        import logging
+        with caplog.at_level(logging.WARNING, logger="src.clubs"):
+            added = apply_suspects()
+
+        assert added == 0
+        assert any("No resolution saved" in r.message for r in caplog.records)

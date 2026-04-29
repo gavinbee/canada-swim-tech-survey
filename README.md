@@ -110,6 +110,21 @@ python main.py --no-cache
 python main.py --delay 0.5
 ```
 
+#### Updating the club list
+
+```bash
+# Re-fetch all sources; prompts interactively for any suspected name typos
+python main.py --refresh-clubs
+
+# Non-interactive alternative (two steps):
+python main.py --detect-suspects   # scrape; save suspects to data/clubs_suspects.json
+# … resolve suspects in data/name_resolutions.json …
+python main.py --apply-suspects    # merge resolved clubs into data/clubs.json
+```
+
+See [`docs/club_discovery.md`](docs/club_discovery.md) for details on name-typo
+resolution and how `--apply-suspects` works.
+
 Outputs:
 - `data/clubs_raw.csv` — club list before detection
 - `data/results.csv` — full enriched dataset
