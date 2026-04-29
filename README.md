@@ -52,7 +52,7 @@ For each club website:
 Platforms detected:
 
 **Swim-specific**
-TeamUnify · Amilia · Uplifter · Club Assistant · SwimTopia · Swimmingly · Webpoint · Swim Canada Online
+TeamUnify · Amilia · Uplifter · Club Assistant · SwimTopia · Swimmingly · Webpoint · Swim Canada Online · Commit
 
 **General sports management**
 SportsEngine · TeamSnap · Jackrabbit · iClass Pro · Sporty HQ · Active Network · Regatta Network · rTeam · FinalForms
@@ -119,6 +119,10 @@ canada-swim-tech-survey/
 │   ├── clubs.py         Club discovery (Swimming Canada + provincial)
 │   ├── detector.py      Website → platform detection
 │   └── visualize.py     CSV → HTML report with Chart.js
+├── tests/               pytest test suite
+├── docs/
+│   ├── club_discovery.md  Per-province source inventory and scraper notes
+│   └── data_sources.md    Active data sources (linked from report footer)
 ├── data/                CSV outputs (git-ignored except .gitkeep)
 ├── output/              HTML report (git-ignored except .gitkeep)
 ├── requirements.txt
@@ -140,4 +144,4 @@ canada-swim-tech-survey/
   (swim-specific platforms are checked before generic CMS). Run `--no-cache` to refresh
   after updating signatures.
 - **Swimming Canada API stability** — the API URL may change when the site is rebuilt.
-  Adjust `SWIMMING_CANADA_API` in `src/clubs.py` if needed.
+  Adjust `CLUB_LIST_URL` in `src/clubs.py` if needed.
