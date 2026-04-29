@@ -117,7 +117,7 @@ _PROVINCIAL_SOURCES = [
 ]
 
 
-def fetch_all_clubs(force_refresh=False, detect_suspects=False):
+def fetch_all_clubs(force_refresh=False):
     """
     Return Canadian swim club dicts ready for software detection.
 
@@ -131,32 +131,31 @@ def fetch_all_clubs(force_refresh=False, detect_suspects=False):
     Pass force_refresh=True (or run main.py --refresh-clubs) to skip the
     snapshot and always hit the live APIs, then save a new snapshot.
 
-    Pass detect_suspects=True (or run main.py --detect-suspects) to save
-    any unresolved name suspects to data/clubs_suspects.json instead of
-    raising UnresolvedSuspectError.  Run --apply-suspects afterward to
-    merge the resolved suspects into data/clubs.json without re-scraping.
+    If any club names look like typos and have no saved resolution in
+    data/name_resolutions.json, their full scraped records are written to
+    data/clubs_suspects.json and UnresolvedSuspectError is raised (exit 2).
+    Add resolutions to name_resolutions.json, then re-run --refresh-clubs or
+    run --apply-suspects to merge the saved records without re-scraping.
     """
-    if not force_refresh and not detect_suspects and SNAPSHOT_PATH.exists():
+    if not force_refresh and SNAPSHOT_PATH.exists():
         return _filter_clubs(_load_snapshot())
 
     unresolved: list[str] = []
-    suspects_out: list[dict] | None = [] if detect_suspects else None
+    suspects_out: list[dict] = []
     clubs = _fetch_live()
     if clubs:
         clubs = _merge_provincial(clubs, unresolved, suspects_out)
         clubs = _filter_clubs(clubs)
         _save_snapshot(clubs)
-        if detect_suspects:
-            if suspects_out:
-                _save_suspects(suspects_out)
-                log.info(
-                    "%d suspect name(s) saved to %s — resolve with "
-                    "--apply-suspects after updating data/name_resolutions.json",
-                    len(suspects_out), SUSPECTS_PATH,
-                )
-            else:
-                log.info("No suspect names found.")
-        elif unresolved:
+        if suspects_out:
+            _save_suspects(suspects_out)
+            log.warning(
+                "%d suspect name(s) saved to %s — add resolutions to "
+                "data/name_resolutions.json, then re-run --refresh-clubs "
+                "or run --apply-suspects",
+                len(suspects_out), SUSPECTS_PATH,
+            )
+        if unresolved:
             raise UnresolvedSuspectError(unresolved)
         return clubs
 

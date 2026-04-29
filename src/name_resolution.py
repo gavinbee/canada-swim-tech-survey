@@ -1,38 +1,32 @@
 """
-Club name typo detection and interactive resolution.
+Club name typo detection and resolution.
 
-When a provincial scraper produces a club name that contains a word that looks
+When a provincial scraper produces a club name containing a word that looks
 like a misspelling of a common swim-club word (e.g. "Clun" instead of "Club"),
-this module flags it and applies whichever resolution has been saved for that
-name in data/name_resolutions.json.
+this module flags it.  The resolution for that name is looked up in
+data/name_resolutions.json.
 
 Resolution file
 ---------------
-data/name_resolutions.json is committed to the repository so that CI runs can
-apply saved decisions without human input.  Each key is the original scraped
-name; each value is one of:
+data/name_resolutions.json is committed to the repository so that all runs
+(local and CI) apply saved decisions without human input.  Each key is the
+original scraped name; each value is one of:
 
     {"action": "rename", "to": "Corrected Name"}
     {"action": "keep"}   # name is intentional, not a typo
     {"action": "skip"}   # entry is not a real club, omit it
 
-Interactive runs (--refresh-clubs in a terminal)
-------------------------------------------------
-When a suspect name has no saved resolution the operator is prompted:
-  (k) keep as-is — saves {"action": "keep"} and continues
-  (c) correct    — prompts for the corrected name, saves {"action": "rename", …}
-  (s) skip       — saves {"action": "skip"} and omits the club
-The choice is written to the file immediately so partial progress survives if
-the process is interrupted.
+When a suspect name has no saved resolution
+-------------------------------------------
+The club is skipped and its full scraped record is written to
+data/clubs_suspects.json.  fetch_all_clubs then raises UnresolvedSuspectError
+so the run fails with exit code 2.
 
-Non-interactive runs (e.g. GitHub Actions)
-------------------------------------------
-If a suspect name has no saved resolution the club is skipped, the name is
-appended to the `unresolved` list passed in by the caller, and
-fetch_all_clubs raises UnresolvedSuspectError so the workflow fails with
-exit code 2.  The operator then runs --refresh-clubs locally, resolves the
-names interactively, and commits both data/name_resolutions.json and the
-updated data/clubs.json.
+To resolve: add entries to data/name_resolutions.json (edit manually or commit
+the file after a colleague reviews it), then either:
+  - re-run --refresh-clubs to re-scrape and apply all resolutions, or
+  - run --apply-suspects to merge the already-scraped records from
+    data/clubs_suspects.json without re-scraping.
 
 Vocabulary design
 -----------------
@@ -47,7 +41,6 @@ counterparts.
 import difflib
 import json
 import logging
-import sys
 from pathlib import Path
 
 log = logging.getLogger(__name__)
@@ -71,7 +64,7 @@ NAME_RESOLUTIONS_PATH = Path(__file__).parent.parent / "data" / "name_resolution
 
 
 class UnresolvedSuspectError(Exception):
-    """Raised by fetch_all_clubs when unresolved name suspects are found non-interactively."""
+    """Raised by fetch_all_clubs when suspect names have no saved resolution."""
     def __init__(self, names: list[str]):
         self.names = names
         super().__init__(f"Unresolved suspected typos: {names}")
@@ -82,12 +75,6 @@ def _load_resolutions() -> dict:
         with open(NAME_RESOLUTIONS_PATH, encoding="utf-8") as f:
             return json.load(f)
     return {}
-
-
-def _save_resolutions(resolutions: dict) -> None:
-    NAME_RESOLUTIONS_PATH.parent.mkdir(exist_ok=True)
-    with open(NAME_RESOLUTIONS_PATH, "w", encoding="utf-8") as f:
-        json.dump(resolutions, f, indent=2, ensure_ascii=False, sort_keys=True)
 
 # ---------------------------------------------------------------------------
 # Detection
@@ -111,39 +98,14 @@ def _find_suspects(name: str) -> list[tuple[str, str]]:
 # ---------------------------------------------------------------------------
 
 
-def _prompt_resolution(name: str, suspects: list[tuple[str, str]]) -> tuple[str, bool]:
-    """Prompt the user interactively and persist their choice. Returns (name, skip)."""
-    resolutions = _load_resolutions()
-    print(f"\nSuspected typo in club name: {name!r}")
-    for word, suggestion in suspects:
-        print(f"  '{word}' resembles '{suggestion}'")
-    print("Options: (k) keep as-is  (c) correct  (s) skip club")
-    while True:
-        choice = input("Choice [k/c/s]: ").strip().lower()
-        if choice == "k":
-            resolutions[name] = {"action": "keep"}
-            _save_resolutions(resolutions)
-            return name, False
-        if choice == "c":
-            corrected = input(f"Corrected name [{name}]: ").strip() or name
-            resolutions[name] = {"action": "rename", "to": corrected}
-            _save_resolutions(resolutions)
-            return corrected, False
-        if choice == "s":
-            resolutions[name] = {"action": "skip"}
-            _save_resolutions(resolutions)
-            return name, True
-        print("Please enter k, c, or s.")
-
-
 def _resolve_name(name: str, unresolved: list[str]) -> tuple[str, bool]:
     """
     Check name for likely typos and apply any saved resolution.
 
     Returns (resolved_name, skip).  On skip the caller must not add the club
-    to the output list.  Appends to unresolved when a suspect has no saved
-    resolution in a non-interactive run; fetch_all_clubs raises
-    UnresolvedSuspectError if that list is non-empty after all clubs are parsed.
+    to the output list.  If no resolution is saved, appends to unresolved and
+    skips; fetch_all_clubs raises UnresolvedSuspectError after all clubs are
+    parsed so the run fails visibly.
     """
     suspects = _find_suspects(name)
     if not suspects:
@@ -162,12 +124,10 @@ def _resolve_name(name: str, unresolved: list[str]) -> tuple[str, bool]:
             log.info("Skipping %r (from name_resolutions.json)", name)
             return name, True
 
-    if sys.stdin.isatty():
-        return _prompt_resolution(name, suspects)
-
-    log.error(
+    log.warning(
         "Unresolved suspected typo in club name %r — skipping. "
-        "Run --refresh-clubs locally to resolve and commit name_resolutions.json.",
+        "Add a resolution to data/name_resolutions.json, then re-run "
+        "--refresh-clubs or run --apply-suspects.",
         name,
     )
     unresolved.append(name)

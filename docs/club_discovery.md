@@ -163,33 +163,31 @@ Each key is the original scraped name; each value is one of:
 
 ### Updating the club list when suspects are found
 
-Three workflows are supported:
+When `--refresh-clubs` encounters a suspect name with no saved resolution it
+writes the full scraped record to `data/clubs_suspects.json` and exits 2.  This
+works the same way locally and in CI — there is no interactive prompt.
 
-**Interactive** — run `--refresh-clubs` in a real terminal.  Each suspect is
-presented with a prompt; the choice is written to `name_resolutions.json`
-immediately and `clubs.json` is updated at the end.
+**To resolve:**
 
-**Two-stage non-interactive** (Claude-friendly, also scriptable):
+1. Inspect `data/clubs_suspects.json` to see which names were flagged.
+2. Add an entry for each to `data/name_resolutions.json`:
+   ```json
+   { "Windsor Aquatic ClubWA": { "action": "rename", "to": "Windsor Aquatic Club" } }
+   ```
+3. Either re-run the full scrape or apply the saved records without re-scraping:
+   ```bash
+   python main.py --refresh-clubs    # re-scrape and apply resolutions
+   # — or —
+   python main.py --apply-suspects   # merge clubs_suspects.json into clubs.json
+   ```
+4. Commit `data/name_resolutions.json` and `data/clubs.json`.
 
-```bash
-# Stage 1 — re-scrape; suspects go to data/clubs_suspects.json, not a prompt
-python main.py --detect-suspects
-
-# (resolve each suspect: edit data/name_resolutions.json or let Claude prompt you)
-
-# Stage 2 — merge resolved suspects into data/clubs.json; no re-scraping
-python main.py --apply-suspects
-```
-
-`--apply-suspects` reads each record from `clubs_suspects.json`, looks up
-the saved resolution in `name_resolutions.json`, and merges the resolved club
-directly into `clubs.json` (deduplicating on name and website).  On success it
-deletes `clubs_suspects.json`.
-
-**CI / GitHub Actions** — `--refresh-clubs` with no TTY exits with code 2 if
-any unresolved suspects remain after the scrape, failing the workflow visibly.
-Commit `name_resolutions.json` alongside `clubs.json` so CI can apply all saved
-resolutions automatically on subsequent runs.
+`--apply-suspects` reads each record from `clubs_suspects.json`, looks up the
+resolution in `name_resolutions.json`, and merges the resolved club directly
+into `clubs.json` (deduplicating on name and website).  It deletes
+`clubs_suspects.json` on success.  If a name has no resolution it logs a warning
+and skips that entry — the file is still deleted so the next `--refresh-clubs`
+starts clean.
 
 ### Vocabulary design
 

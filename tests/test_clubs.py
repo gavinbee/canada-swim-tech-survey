@@ -325,14 +325,13 @@ class TestParseNlPdfs:
             assert c["source_url"] == "https://swimmingnl.ca/directory"
 
 
-class TestDetectSuspectsMode:
+class TestSuspectsOut:
     """_make_club with suspects_out captures unresolved suspects as full records."""
 
-    def test_suspect_saved_to_suspects_out(self, tmp_path, monkeypatch):
+    def test_unresolved_suspect_saved_to_suspects_out(self, tmp_path, monkeypatch):
         res_file = tmp_path / "name_resolutions.json"
         res_file.write_text("{}", encoding="utf-8")
         monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
-        monkeypatch.setattr("sys.stdin", MagicMock(isatty=lambda: False))
 
         suspects_out = []
         result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
@@ -353,15 +352,14 @@ class TestDetectSuspectsMode:
         result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
                              suspects_out=suspects_out)
         assert result is None
-        assert suspects_out == []  # saved skip, not an unresolved suspect
+        assert suspects_out == []  # saved skip resolution, not an unresolved suspect
 
-    def test_no_suspects_out_when_none(self, tmp_path, monkeypatch):
+    def test_suspects_out_none_still_skips(self, tmp_path, monkeypatch):
         res_file = tmp_path / "name_resolutions.json"
         res_file.write_text("{}", encoding="utf-8")
         monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
-        monkeypatch.setattr("sys.stdin", MagicMock(isatty=lambda: False))
 
-        # suspects_out=None means detect mode is off — no record saved, just skip
+        # suspects_out=None — club is still skipped, record just isn't captured
         result = _make_club("Aqua Aces Swim Clun", "https://aquaaces.ca", "NL",
                              suspects_out=None)
         assert result is None

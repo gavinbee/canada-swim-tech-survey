@@ -1,7 +1,6 @@
 """Tests for src/name_resolution.py — club name typo detection and resolution."""
 
 import json
-from unittest.mock import MagicMock
 
 from src.name_resolution import _find_suspects, _resolve_name
 
@@ -65,12 +64,11 @@ class TestResolveName:
         assert skip is False
         assert unresolved == []
 
-    def test_unresolved_non_interactive_skips_and_appends(self, tmp_path, monkeypatch):
-        """Non-interactive run with no resolution must skip the club and append to unresolved."""
+    def test_unresolved_suspect_skips_and_appends(self, tmp_path, monkeypatch):
+        """Suspect with no saved resolution must be skipped and appended to unresolved."""
         res_file = tmp_path / "name_resolutions.json"
         res_file.write_text("{}", encoding="utf-8")
         monkeypatch.setattr("src.name_resolution.NAME_RESOLUTIONS_PATH", res_file)
-        monkeypatch.setattr("sys.stdin", MagicMock(isatty=lambda: False))
         unresolved = []
         name, skip = _resolve_name("Aqua Aces Swim Clun", unresolved)
         assert skip is True
