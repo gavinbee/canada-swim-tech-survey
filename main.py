@@ -12,6 +12,14 @@ Steps:
   4. Save enriched results to data/results.csv
   5. Generate output/report.html with Chart.js visualisations
   6. Write output/RUN_INFO.md with execution timestamp and summary stats
+
+Club-list management flags (do not run the full survey):
+    --refresh-clubs   Re-fetch live and update data/clubs.json.  If any club names
+                      look like typos with no saved resolution, their records are
+                      written to data/clubs_suspects.json and the run exits 2.
+    --apply-suspects  Merge resolved suspects from data/clubs_suspects.json into
+                      data/clubs.json using saved data/name_resolutions.json
+                      (no re-scraping).
 """
 
 import argparse
@@ -26,7 +34,8 @@ from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
 
-from src.clubs import fetch_all_clubs
+from src.clubs import apply_suspects, fetch_all_clubs
+from src.name_resolution import UnresolvedSuspectError
 from src.classify import reclassify
 from src.detector import detect
 from src.visualize import generate_html
@@ -123,16 +132,39 @@ def _write_run_info(df, ran_at):
     log.info("Run info → %s", RUN_INFO_MD)
 
 
-def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False):
+def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False,
+        apply_suspects_mode=False):
     OUTPUT_DIR.mkdir(exist_ok=True)
     DATA_DIR.mkdir(exist_ok=True)
+
+    # ----------------------------------------------------------------
+    # Club-list management modes — update clubs.json then exit
+    # ----------------------------------------------------------------
+    if apply_suspects_mode:
+        log.info("=== Applying resolved suspects to data/clubs.json ===")
+        added = apply_suspects()
+        if added:
+            log.info("Done. %d club(s) added — commit data/clubs.json and data/name_resolutions.json.", added)
+        else:
+            log.info("Done. No new clubs added (all suspects were skipped or already present).")
+        return
+
     ran_at = datetime.now(timezone.utc)
 
     # ----------------------------------------------------------------
     # Step 1: fetch clubs
     # ----------------------------------------------------------------
     log.info("=== Step 1: Fetching club list ===")
-    clubs = fetch_all_clubs(force_refresh=refresh_clubs)
+    try:
+        clubs = fetch_all_clubs(force_refresh=refresh_clubs)
+    except UnresolvedSuspectError as exc:
+        log.error(
+            "Club refresh halted: %d club name(s) had suspected typos with no saved "
+            "resolution: %s. Add resolutions to data/name_resolutions.json, then "
+            "re-run --refresh-clubs or run --apply-suspects.",
+            len(exc.names), exc.names,
+        )
+        sys.exit(2)
 
     if not clubs:
         log.error("No clubs found — check network access and Swimming Canada website.")
@@ -211,7 +243,14 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--refresh-clubs", action="store_true",
-        help="Re-fetch the club list from Swimming Canada and update data/clubs.json"
+        help="Re-fetch the club list from all sources and update data/clubs.json. "
+             "If any club names look like typos with no saved resolution, their records "
+             "are written to data/clubs_suspects.json and the run exits 2."
+    )
+    parser.add_argument(
+        "--apply-suspects", action="store_true",
+        help="Merge resolved suspects from data/clubs_suspects.json into data/clubs.json "
+             "using saved data/name_resolutions.json (no re-scraping)."
     )
     args = parser.parse_args()
 
@@ -220,4 +259,5 @@ if __name__ == "__main__":
         use_cache=not args.no_cache,
         extra_delay=args.delay,
         refresh_clubs=args.refresh_clubs,
+        apply_suspects_mode=args.apply_suspects,
     )

@@ -130,8 +130,9 @@ Run `python main.py --refresh-clubs` locally to re-fetch and update the snapshot
 |---|---|
 | Association site | https://swimmingnl.ca/ |
 | Club directory | https://swimmingnl.ca/directory |
-| Data format | Club contacts are published as individual PDF downloads (one per club). No structured name/website data in the HTML. |
-| Status | ❌ Not implemented — data is only in PDFs |
+| Data format | GoDaddy Website Builder page. Each club is listed as a PDF download link; the anchor text contains the club name followed by a year suffix and "(pdf)Download" (e.g. "Aqua Aces Swim Club 2025-26(pdf)Download"). Each PDF is a structured contact form with fields including "Club Website" (value may be "N/A"). The scraper strips the trailing suffix from each anchor, skips the "Swimming NL Executive" admin entry, fetches each PDF, and extracts the "Club Website" value via regex. Requires `pdfplumber`. |
+| Scraper type | `html_pdf_links_nl` |
+| Status | ✅ Implemented |
 
 ---
 
@@ -139,6 +140,62 @@ Run `python main.py --refresh-clubs` locally to re-fetch and update the snapshot
 
 Not linked from findaclub.swimming.ca. Any affiliated clubs appear in the
 national Swimming Canada feed.
+
+---
+
+## Club name typo detection and resolution (`src/name_resolution.py`)
+
+When a provincial scraper produces a club name containing a word that looks like
+a misspelling of a common swim-club term (e.g. "Clun" instead of "Club"), the
+name is flagged as a suspected typo. The resolution is looked up in
+`data/name_resolutions.json` (committed to the repo). If no resolution is saved,
+behaviour depends on whether the run is interactive or not.
+
+### Resolution file — `data/name_resolutions.json`
+
+Each key is the original scraped name; each value is one of:
+
+```json
+{ "action": "rename", "to": "Corrected Name" }
+{ "action": "keep" }
+{ "action": "skip" }
+```
+
+### Updating the club list when suspects are found
+
+When `--refresh-clubs` encounters a suspect name with no saved resolution it
+writes the full scraped record to `data/clubs_suspects.json` and exits 2.  This
+works the same way locally and in CI — there is no interactive prompt.
+
+**To resolve:**
+
+1. Inspect `data/clubs_suspects.json` to see which names were flagged.
+2. Add an entry for each to `data/name_resolutions.json`:
+   ```json
+   { "Windsor Aquatic ClubWA": { "action": "rename", "to": "Windsor Aquatic Club" } }
+   ```
+3. Either re-run the full scrape or apply the saved records without re-scraping:
+   ```bash
+   python main.py --refresh-clubs    # re-scrape and apply resolutions
+   # — or —
+   python main.py --apply-suspects   # merge clubs_suspects.json into clubs.json
+   ```
+4. Commit `data/name_resolutions.json` and `data/clubs.json`.
+
+`--apply-suspects` reads each record from `clubs_suspects.json`, looks up the
+resolution in `name_resolutions.json`, and merges the resolved club directly
+into `clubs.json` (deduplicating on name and website).  It deletes
+`clubs_suspects.json` on success.  If a name has no resolution it logs a warning
+and skips that entry — the file is still deleted so the next `--refresh-clubs`
+starts clean.
+
+### Vocabulary design
+
+`_CLUB_VOCAB` contains only words that are unambiguously standard English or
+French swim-club terms. Words fewer than 4 characters are never checked to avoid
+false positives on short prepositions ("de", "les", …). French forms
+("aquatique", "natation") are listed as exact-match entries so they pass through
+without triggering.
 
 ---
 
@@ -151,9 +208,16 @@ national Swimming Canada feed.
    - WordPress with custom blocks → inspect `div` class names and text patterns
    - Squarespace → try `?format=json`; inspect `collection.items`
    - Dynamic / headless-only → note it as not implemented in `docs/club_discovery.md`
-3. Implement a `_parse_XX_YYY(province, response)` function that returns a list of
-   dicts with keys: `name`, `province`, `province_name`, `website`, `source`.
-   Use `_make_club(name, website, province, postal)` as a helper.
+3. Implement a `_parse_XX_YYY(province, response, source_url="", unresolved=None)` function
+   that returns a list of dicts. Use
+   `_make_club(name, website, province, postal="", source_url=source_url, unresolved=unresolved)`
+   as a helper — it handles name-typo resolution, sets `province`, `province_name`,
+   `website` (normalised), and `source_url`. It returns `None` for skipped clubs, so always
+   guard with `if club:`.
 4. Register the new entry in `_PROVINCIAL_SOURCES` as `("XX", "scraper_type", url)`.
-5. Run `python main.py --refresh-clubs` locally to refresh `data/clubs.json`.
-6. Update this document and [data_sources.md](data_sources.md).
+   `_fetch_provincial` dispatches on the scraper type string and passes `url` as `source_url`.
+5. Add a short label for the new source in `_SOURCE_LABELS` in `src/visualize.py` so the
+   HTML report table shows a linked label (e.g. "Swim XX") instead of the raw URL.
+6. Run `python main.py --refresh-clubs` locally to refresh `data/clubs.json`.
+7. Update this document and [data_sources.md](data_sources.md).
+8. Write tests for the new parser in `tests/test_clubs.py`.

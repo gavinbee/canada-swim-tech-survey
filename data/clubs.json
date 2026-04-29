@@ -735,6 +735,13 @@
     "source_url": "https://findaclub.swimming.ca/"
   },
   {
+    "name": "Westlock Gators",
+    "province": "AB",
+    "province_name": "Alberta",
+    "website": "https://www.gomotionapp.com/team/assawgsc/page/home",
+    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
+  },
+  {
     "name": "Camrose Sea Serpents",
     "province": "AB",
     "province_name": "Alberta",
@@ -3997,13 +4004,6 @@
     "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
   },
   {
-    "name": "Westlock Gators",
-    "province": "AB",
-    "province_name": "Alberta",
-    "website": "https://www.gomotionapp.com/team/assawgsc/page/home",
-    "source_url": "https://swimalberta.ca/community/clubs/find-a-club/"
-  },
-  {
     "name": "Alpha Aquatic Club Inc.",
     "province": "MB",
     "province_name": "Manitoba",
@@ -4107,5 +4107,54 @@
     "province_name": "Manitoba",
     "website": "",
     "source_url": "https://swimmanitoba.mb.ca/clubs/"
+  },
+  {
+    "name": "CBS Bluefins",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "http://cbsbluefins.ca",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Deer Lake Dolphins",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Gander Lakers Swim Club",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "https://www.ganderlakers.ca",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Northern Lights  Swim Club",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Poseidon Swim Club",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Port Aux Basques Piranhas Swim Club",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "",
+    "source_url": "https://swimmingnl.ca/directory"
+  },
+  {
+    "name": "Rocky Island Masters Swim Club",
+    "province": "NL",
+    "province_name": "Newfoundland and Labrador",
+    "website": "https://www.rockswim.ca",
+    "source_url": "https://swimmingnl.ca/directory"
   }
 ]

@@ -16,6 +16,8 @@ from pathlib import Path
 import requests
 import urllib3
 
+from src.name_resolution import UnresolvedSuspectError, _load_resolutions, _resolve_name
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 log = logging.getLogger(__name__)
@@ -93,6 +95,7 @@ def _city_from_address(address):
 
 
 SNAPSHOT_PATH = Path(__file__).parent.parent / "data" / "clubs.json"
+SUSPECTS_PATH = Path(__file__).parent.parent / "data" / "clubs_suspects.json"
 
 # Websites and names that belong to governing bodies, officials registrations,
 # or other non-club entries. Extend these sets when new non-club entries appear.
@@ -105,12 +108,12 @@ _EXCLUDED_NAMES = {
 }
 
 # Provincial sources: (province_code, scraper_type, url)
-# scraper_type: "gatsby_json" | "html_table_bc" | "html_table_mb" | "html_divs_ab"
 _PROVINCIAL_SOURCES = [
-    ("ON", "gatsby_json",  "https://www.swimontario.com/page-data/clubs/find-a-club/page-data.json"),
-    ("BC", "html_table_bc", "https://swimbc.ca/clubs/how-to-join-a-swim-club/"),
-    ("AB", "html_divs_ab",  "https://swimalberta.ca/community/clubs/find-a-club/"),
-    ("MB", "html_table_mb", "https://swimmanitoba.mb.ca/clubs/"),
+    ("ON", "gatsby_json",      "https://www.swimontario.com/page-data/clubs/find-a-club/page-data.json"),
+    ("BC", "html_table_bc",    "https://swimbc.ca/clubs/how-to-join-a-swim-club/"),
+    ("AB", "html_divs_ab",     "https://swimalberta.ca/community/clubs/find-a-club/"),
+    ("MB", "html_table_mb",    "https://swimmanitoba.mb.ca/clubs/"),
+    ("NL", "html_pdf_links_nl","https://swimmingnl.ca/directory"),
 ]
 
 
@@ -127,15 +130,33 @@ def fetch_all_clubs(force_refresh=False):
 
     Pass force_refresh=True (or run main.py --refresh-clubs) to skip the
     snapshot and always hit the live APIs, then save a new snapshot.
+
+    If any club names look like typos and have no saved resolution in
+    data/name_resolutions.json, their full scraped records are written to
+    data/clubs_suspects.json and UnresolvedSuspectError is raised (exit 2).
+    Add resolutions to name_resolutions.json, then re-run --refresh-clubs or
+    run --apply-suspects to merge the saved records without re-scraping.
     """
     if not force_refresh and SNAPSHOT_PATH.exists():
         return _filter_clubs(_load_snapshot())
 
+    unresolved: list[str] = []
+    suspects_out: list[dict] = []
     clubs = _fetch_live()
     if clubs:
-        clubs = _merge_provincial(clubs)
+        clubs = _merge_provincial(clubs, unresolved, suspects_out)
         clubs = _filter_clubs(clubs)
         _save_snapshot(clubs)
+        if suspects_out:
+            _save_suspects(suspects_out)
+            log.warning(
+                "%d suspect name(s) saved to %s — add resolutions to "
+                "data/name_resolutions.json, then re-run --refresh-clubs "
+                "or run --apply-suspects",
+                len(suspects_out), SUSPECTS_PATH,
+            )
+        if unresolved:
+            raise UnresolvedSuspectError(unresolved)
         return clubs
 
     # Live fetch failed — fall back to snapshot
@@ -144,6 +165,69 @@ def fetch_all_clubs(force_refresh=False):
         return _filter_clubs(_load_snapshot())
 
     return []
+
+
+def apply_suspects() -> int:
+    """
+    Read data/clubs_suspects.json, apply saved name_resolutions.json, and
+    merge resolved clubs into data/clubs.json.  Deletes clubs_suspects.json
+    on success.  Returns the number of clubs added.
+
+    Run this after --detect-suspects has saved suspects and you have updated
+    data/name_resolutions.json (either manually or via --refresh-clubs on an
+    interactive terminal).
+    """
+    if not SUSPECTS_PATH.exists():
+        log.info("No suspects file at %s — nothing to apply", SUSPECTS_PATH)
+        return 0
+
+    with open(SUSPECTS_PATH, encoding="utf-8") as f:
+        suspects = json.load(f)
+
+    if not suspects:
+        SUSPECTS_PATH.unlink()
+        return 0
+
+    resolutions = _load_resolutions()
+    clubs = _load_snapshot() if SNAPSHOT_PATH.exists() else []
+    existing_names = {c["name"].lower() for c in clubs}
+    existing_sites = {c["website"].lower() for c in clubs if c["website"]}
+
+    added = 0
+    for suspect in suspects:
+        original_name = suspect["name"]
+        entry = resolutions.get(original_name)
+        if not entry:
+            log.warning("No resolution saved for %r — skipping (add to name_resolutions.json)", original_name)
+            continue
+        action = entry.get("action")
+        if action == "skip":
+            log.info("Skipping %r per saved resolution", original_name)
+            continue
+        resolved_name = entry["to"] if action == "rename" else original_name
+
+        name_key = resolved_name.lower()
+        site_key = suspect["website"].lower() if suspect.get("website") else None
+        if name_key in existing_names:
+            log.info("Skipping %r — already in clubs.json", resolved_name)
+            continue
+        if site_key and site_key in existing_sites:
+            log.info("Skipping %r — website already in clubs.json", resolved_name)
+            continue
+
+        clubs.append({**suspect, "name": resolved_name})
+        existing_names.add(name_key)
+        if site_key:
+            existing_sites.add(site_key)
+        added += 1
+
+    if added:
+        _save_snapshot(clubs)
+        log.info("Added %d resolved club(s) → %s", added, SNAPSHOT_PATH)
+
+    SUSPECTS_PATH.unlink()
+    log.info("Removed suspects file %s", SUSPECTS_PATH)
+    return added
 
 
 def _filter_clubs(clubs):
@@ -170,14 +254,20 @@ def _normalise_website(url):
     return url
 
 
-def _merge_provincial(clubs):
+def _save_suspects(suspects: list[dict]) -> None:
+    SUSPECTS_PATH.parent.mkdir(exist_ok=True)
+    with open(SUSPECTS_PATH, "w", encoding="utf-8") as f:
+        json.dump(suspects, f, indent=2, ensure_ascii=False)
+
+
+def _merge_provincial(clubs, unresolved, suspects_out=None):
     """Fetch each known provincial directory and add clubs missing from the national list."""
     existing_names = {c["name"].lower() for c in clubs}
     existing_sites = {c["website"].lower() for c in clubs if c["website"]}
 
     added = 0
     for province, scraper, url in _PROVINCIAL_SOURCES:
-        provincial = _fetch_provincial(province, scraper, url)
+        provincial = _fetch_provincial(province, scraper, url, unresolved, suspects_out)
         for club in provincial:
             name_key = club["name"].lower()
             site_key = club["website"].lower() if club["website"] else None
@@ -196,7 +286,7 @@ def _merge_provincial(clubs):
     return clubs
 
 
-def _fetch_provincial(province, scraper, url):
+def _fetch_provincial(province, scraper, url, unresolved, suspects_out=None):
     log.info("Fetching provincial club list (%s): %s", province, url)
     ua = {"User-Agent": HEADERS["User-Agent"]}
     try:
@@ -207,22 +297,39 @@ def _fetch_provincial(province, scraper, url):
         return []
 
     if scraper == "gatsby_json":
-        return _parse_gatsby_json(province, r)
+        return _parse_gatsby_json(province, r, unresolved, suspects_out)
     if scraper == "html_table_bc":
-        return _parse_bc_table(province, r, source_url=url)
+        return _parse_bc_table(province, r, source_url=url, unresolved=unresolved, suspects_out=suspects_out)
     if scraper == "html_table_mb":
-        return _parse_mb_table(province, r, source_url=url)
+        return _parse_mb_table(province, r, source_url=url, unresolved=unresolved, suspects_out=suspects_out)
     if scraper == "html_divs_ab":
-        return _parse_ab_divs(province, r, source_url=url)
+        return _parse_ab_divs(province, r, source_url=url, unresolved=unresolved, suspects_out=suspects_out)
+    if scraper == "html_pdf_links_nl":
+        return _parse_nl_pdfs(province, r, source_url=url, unresolved=unresolved, suspects_out=suspects_out)
 
     log.warning("Unknown provincial scraper type: %s", scraper)
     return []
 
 
-def _make_club(name, website, province, postal="", source_url=""):
+def _make_club(name, website, province, postal="", source_url="", unresolved=None, suspects_out=None):
+    _unresolved = unresolved if unresolved is not None else []
+    prev_len = len(_unresolved)
+    resolved_name, skip = _resolve_name(name, _unresolved)
+    if skip:
+        if suspects_out is not None and len(_unresolved) > prev_len:
+            # Unresolved suspect in detect mode — save full record for --apply-suspects
+            prov = _province_from_address(postal) or province
+            suspects_out.append({
+                "name": name,
+                "province": prov,
+                "province_name": PROVINCE_NAMES.get(prov, prov),
+                "website": _normalise_website(website),
+                "source_url": source_url,
+            })
+        return None
     prov = _province_from_address(postal) or province
     return {
-        "name": name,
+        "name": resolved_name,
         "province": prov,
         "province_name": PROVINCE_NAMES.get(prov, prov),
         "website": _normalise_website(website),
@@ -233,7 +340,7 @@ def _make_club(name, website, province, postal="", source_url=""):
 _SWIMONTARIO_BASE = "https://www.swimontario.com/clubs/find-a-club/"
 
 
-def _parse_gatsby_json(province, r):
+def _parse_gatsby_json(province, r, unresolved, suspects_out=None):
     try:
         data = r.json()
         children = data["result"]["data"]["wagtail"]["page"]["children"]
@@ -246,13 +353,16 @@ def _parse_gatsby_json(province, r):
         slug = (item.get("slug") or "").strip()
         source_url = f"{_SWIMONTARIO_BASE}{slug}/" if slug else _SWIMONTARIO_BASE
         if name:
-            clubs.append(_make_club(name, item.get("website") or "", province,
-                                    item.get("postalcode") or "", source_url=source_url))
+            club = _make_club(name, item.get("website") or "", province,
+                              item.get("postalcode") or "", source_url=source_url,
+                              unresolved=unresolved, suspects_out=suspects_out)
+            if club:
+                clubs.append(club)
     log.info("Fetched %d clubs from Gatsby JSON (%s)", len(clubs), province)
     return clubs
 
 
-def _parse_bc_table(province, r, source_url=""):
+def _parse_bc_table(province, r, source_url="", unresolved=None, suspects_out=None):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     table = soup.find("table")
@@ -269,13 +379,15 @@ def _parse_bc_table(province, r, source_url=""):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province,
-                                    source_url=source_url))
+            club = _make_club(name, links[0] if links else "", province,
+                              source_url=source_url, unresolved=unresolved, suspects_out=suspects_out)
+            if club:
+                clubs.append(club)
     log.info("Fetched %d clubs from BC table", len(clubs))
     return clubs
 
 
-def _parse_mb_table(province, r, source_url=""):
+def _parse_mb_table(province, r, source_url="", unresolved=None, suspects_out=None):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     table = soup.find("table")
@@ -292,13 +404,15 @@ def _parse_mb_table(province, r, source_url=""):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province,
-                                    source_url=source_url))
+            club = _make_club(name, links[0] if links else "", province,
+                              source_url=source_url, unresolved=unresolved, suspects_out=suspects_out)
+            if club:
+                clubs.append(club)
     log.info("Fetched %d clubs from MB table", len(clubs))
     return clubs
 
 
-def _parse_ab_divs(province, r, source_url=""):
+def _parse_ab_divs(province, r, source_url="", unresolved=None, suspects_out=None):
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(r.text, "lxml")
     clubs = []
@@ -310,9 +424,66 @@ def _parse_ab_divs(province, r, source_url=""):
                  if a["href"].startswith("http") and "google" not in a["href"]
                  and "facebook" not in a["href"] and "swimalberta" not in a["href"]]
         if name:
-            clubs.append(_make_club(name, links[0] if links else "", province,
-                                    source_url=source_url))
+            club = _make_club(name, links[0] if links else "", province,
+                              source_url=source_url, unresolved=unresolved, suspects_out=suspects_out)
+            if club:
+                clubs.append(club)
     log.info("Fetched %d clubs from AB divs", len(clubs))
+    return clubs
+
+
+_NL_EXCLUDE_NAMES = {"swimming nl executive"}
+
+
+def _parse_nl_pdfs(province, r, source_url="", unresolved=None, suspects_out=None):
+    """Parse the Swimming NL directory page (GoDaddy site).
+
+    Each club is listed as a PDF download link.  The anchor text contains the
+    club name with a trailing suffix like " 2025-26(pdf)Download" that is
+    stripped.  Each PDF may contain a "Club Website" field; "N/A" values are
+    treated as no website.
+    """
+    from bs4 import BeautifulSoup
+    import io
+    import pdfplumber
+
+    soup = BeautifulSoup(r.text, "lxml")
+    clubs = []
+    ua = {"User-Agent": HEADERS["User-Agent"]}
+
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        if not re.search(r"\.pdf", href, re.I):
+            continue
+        raw_text = a.get_text(separator=" ", strip=True)
+        # Strip trailing download/year suffix: " 2025-26(pdf)Download", "(pdf)Download", etc.
+        name = re.sub(r"\s*\d{4}[-–]\d{2,4}\s*\(pdf\)\s*download\s*$", "", raw_text, flags=re.I).strip()
+        name = re.sub(r"\s*\(pdf\)\s*download\s*$", "", name, flags=re.I).strip()
+        if not name or name.lower() in _NL_EXCLUDE_NAMES:
+            continue
+
+        website = ""
+        try:
+            if href.startswith("//"):
+                href = "https:" + href
+            pdf_resp = requests.get(href, headers=ua, timeout=20, verify=False)
+            pdf_resp.raise_for_status()
+            with pdfplumber.open(io.BytesIO(pdf_resp.content)) as pdf:
+                text = "\n".join(page.extract_text() or "" for page in pdf.pages)
+            m = re.search(r"Club Website[ \t]+([^\n]+)", text)
+            if m:
+                candidate = m.group(1).strip()
+                if candidate.lower() not in ("n/a", "", "none"):
+                    website = candidate
+        except Exception as exc:
+            log.debug("NL PDF fetch/parse failed for %s: %s", name, exc)
+
+        club = _make_club(name, website, province, source_url=source_url,
+                          unresolved=unresolved, suspects_out=suspects_out)
+        if club:
+            clubs.append(club)
+
+    log.info("Fetched %d clubs from NL PDF links", len(clubs))
     return clubs
 
 

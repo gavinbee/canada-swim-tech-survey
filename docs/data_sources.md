@@ -11,6 +11,7 @@ afterwards and deduplicated on (name, website).
 | Swim Alberta | https://swimalberta.ca | Alberta |
 | Swim Manitoba | https://swimmanitoba.mb.ca | Manitoba |
 | Swim Ontario | https://www.swimontario.com | Ontario |
+| Swimming NL | https://swimmingnl.ca/directory | Newfoundland and Labrador |
 
 For implementation details — scraper types, data formats, and provinces not
 yet covered — see [club_discovery.md](club_discovery.md).

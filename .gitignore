@@ -6,7 +6,7 @@ __pycache__/
 .env
 data/clubs_raw.csv
 data/results.csv
-# clubs.json is committed — it's the snapshot used by GitHub Actions
+# clubs.json and name_resolutions.json are committed — used by GitHub Actions
 output/*
 !output/.gitkeep
 .claude/
