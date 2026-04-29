@@ -32,11 +32,18 @@ websites (BC, AB, SK, …)                          │
 ### 1 — Club discovery (`src/clubs.py`)
 
 Starts with the Swimming Canada national club-list API (JSONP), then supplements
-with provincial association directories for BC, AB, MB, and ON to capture clubs
+with provincial association directories for BC, AB, MB, ON, and NL to capture clubs
 not registered nationally. Results are deduplicated on name and website URL.
 
+**Name-typo detection** (`src/name_resolution.py`): each scraped club name is checked
+against a vocabulary of common swim-club words. Suspected typos are resolved using
+`data/name_resolutions.json` (committed to the repo). Interactive runs (`--refresh-clubs`
+in a terminal) prompt for a decision; non-interactive runs (CI) skip the suspect and
+raise `UnresolvedSuspectError`, exiting with code 2 so the workflow fails visibly.
+
 See [`docs/club_discovery.md`](docs/club_discovery.md) for the complete source
-inventory, data formats, and implementation status for each province.
+inventory, data formats, implementation status for each province, and a full
+description of the name-resolution system.
 
 ### 2 — Software detection (`src/detector.py`)
 
@@ -116,9 +123,10 @@ Outputs:
 canada-swim-tech-survey/
 ├── main.py              Entry point / orchestrator
 ├── src/
-│   ├── clubs.py         Club discovery (Swimming Canada + provincial)
-│   ├── detector.py      Website → platform detection
-│   └── visualize.py     CSV → HTML report with Chart.js
+│   ├── clubs.py             Club discovery (Swimming Canada + provincial)
+│   ├── name_resolution.py   Club name typo detection and interactive resolution
+│   ├── detector.py          Website → platform detection
+│   └── visualize.py         CSV → HTML report with Chart.js
 ├── tests/               pytest test suite
 ├── docs/
 │   ├── club_discovery.md  Per-province source inventory and scraper notes

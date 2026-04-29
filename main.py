@@ -27,6 +27,7 @@ import pandas as pd
 from tqdm import tqdm
 
 from src.clubs import fetch_all_clubs
+from src.name_resolution import UnresolvedSuspectError
 from src.classify import reclassify
 from src.detector import detect
 from src.visualize import generate_html
@@ -132,7 +133,16 @@ def run(limit=None, use_cache=True, extra_delay=0.0, refresh_clubs=False):
     # Step 1: fetch clubs
     # ----------------------------------------------------------------
     log.info("=== Step 1: Fetching club list ===")
-    clubs = fetch_all_clubs(force_refresh=refresh_clubs)
+    try:
+        clubs = fetch_all_clubs(force_refresh=refresh_clubs)
+    except UnresolvedSuspectError as exc:
+        log.error(
+            "Club refresh halted: %d club name(s) had suspected typos with no saved "
+            "resolution: %s. Run --refresh-clubs locally (interactive terminal) to "
+            "resolve them, then commit data/name_resolutions.json alongside data/clubs.json.",
+            len(exc.names), exc.names,
+        )
+        sys.exit(2)
 
     if not clubs:
         log.error("No clubs found — check network access and Swimming Canada website.")

@@ -1,5 +1,6 @@
 """Tests for src/clubs.py — club discovery and address parsing."""
 
+import io
 import json
 from unittest.mock import MagicMock, patch
 
@@ -7,6 +8,7 @@ import pytest
 
 from src.clubs import (
     _city_from_address,
+    _parse_nl_pdfs,
     _province_from_address,
     fetch_all_clubs,
 )
@@ -74,6 +76,7 @@ class TestCityFromAddress:
 
     def test_empty(self):
         assert _city_from_address("") == ""
+
 
 
 @pytest.fixture(autouse=True)
@@ -222,3 +225,99 @@ class TestExclusions:
         fetch_all_clubs(force_refresh=True)
         assert not any(c["website"] == "https://www.csca.org" for c in saved)
         assert not any(c["name"] == "Officials Registration ON" for c in saved)
+
+
+class TestParseNlPdfs:
+    """Unit tests for _parse_nl_pdfs — Swimming NL directory scraper."""
+
+    # GoDaddy CDN URLs are protocol-relative (//img1.wsimg.com/…)
+    _DIRECTORY_HTML = """
+    <html><body>
+      <a href="//img1.wsimg.com/aqua-aces.pdf">Aqua Aces Swim Club 2025-26(pdf)Download</a>
+      <a href="//img1.wsimg.com/exec.pdf">Swimming NL Executive 2025-26(pdf)Download</a>
+      <a href="//img1.wsimg.com/vikings.pdf">Vikings Aquatic Club(pdf)Download</a>
+    </body></html>
+    """
+
+    def _make_directory_response(self):
+        mock = MagicMock()
+        mock.raise_for_status = MagicMock()
+        mock.text = self._DIRECTORY_HTML
+        return mock
+
+    def _make_pdf_response(self, website="N/A"):
+        mock = MagicMock()
+        mock.raise_for_status = MagicMock()
+        pdf_text = f"Club Name Aqua Aces Swim Club\nClub Website {website}\nClub email address test@test.com\n"
+        mock.content = pdf_text.encode()
+        return mock
+
+    def _call_parse(self, pdf_website="N/A"):
+        r = self._make_directory_response()
+        pdf_text = f"Club Name Aqua Aces Swim Club\nClub Website {pdf_website}\nClub email address test@test.com\n"
+        with patch("src.clubs.requests.get") as mock_get, \
+             patch("pdfplumber.open") as mock_pdf_open:
+            mock_get.return_value = self._make_pdf_response(pdf_website)
+            mock_page = MagicMock()
+            mock_page.extract_text.return_value = pdf_text
+            mock_pdf_open.return_value.__enter__.return_value.pages = [mock_page]
+            return _parse_nl_pdfs("NL", r, source_url="https://swimmingnl.ca/directory")
+
+    def test_club_names_parsed(self):
+        clubs = self._call_parse()
+        names = [c["name"] for c in clubs]
+        assert "Aqua Aces Swim Club" in names
+        assert "Vikings Aquatic Club" in names
+
+    def test_executive_excluded(self):
+        clubs = self._call_parse()
+        assert not any("executive" in c["name"].lower() for c in clubs)
+
+    def test_website_na_cleared(self):
+        clubs = self._call_parse(pdf_website="N/A")
+        aqua = next(c for c in clubs if c["name"] == "Aqua Aces Swim Club")
+        assert aqua["website"] == ""
+
+    def test_website_blank_line_not_bled_into_next_field(self):
+        """Regression: blank Club Website field must not capture the next line."""
+        r = self._make_directory_response()
+        # "Club Website" on its own line, next line is email field
+        pdf_text = "Club Name Test Club\nClub Website\nClub email address info@test.com\n"
+        with patch("src.clubs.requests.get") as mock_get, \
+             patch("pdfplumber.open") as mock_pdf_open:
+            mock_get.return_value = self._make_pdf_response()
+            mock_page = MagicMock()
+            mock_page.extract_text.return_value = pdf_text
+            mock_pdf_open.return_value.__enter__.return_value.pages = [mock_page]
+            clubs = _parse_nl_pdfs("NL", r, source_url="https://swimmingnl.ca/directory")
+        assert all(c["website"] == "" for c in clubs)
+
+    def test_protocol_relative_pdf_url_resolved(self):
+        """Regression: //img1.wsimg.com/… hrefs must have https: prepended."""
+        captured_urls = []
+        r = self._make_directory_response()
+        pdf_text = "Club Name Aqua Aces Swim Club\nClub Website https://aquaaces.ca\n"
+        with patch("src.clubs.requests.get") as mock_get, \
+             patch("pdfplumber.open") as mock_pdf_open:
+            mock_get.return_value = self._make_pdf_response("https://aquaaces.ca")
+            mock_get.side_effect = lambda url, **kw: (captured_urls.append(url), self._make_pdf_response("https://aquaaces.ca"))[1]
+            mock_page = MagicMock()
+            mock_page.extract_text.return_value = pdf_text
+            mock_pdf_open.return_value.__enter__.return_value.pages = [mock_page]
+            _parse_nl_pdfs("NL", r, source_url="https://swimmingnl.ca/directory")
+        assert all(url.startswith("https://") for url in captured_urls)
+
+    def test_website_extracted_when_present(self):
+        clubs = self._call_parse(pdf_website="https://aquaaces.ca")
+        aqua = next(c for c in clubs if c["name"] == "Aqua Aces Swim Club")
+        assert aqua["website"] == "https://aquaaces.ca"
+
+    def test_province_set(self):
+        clubs = self._call_parse()
+        for c in clubs:
+            assert c["province"] == "NL"
+
+    def test_source_url_set(self):
+        clubs = self._call_parse()
+        for c in clubs:
+            assert c["source_url"] == "https://swimmingnl.ca/directory"

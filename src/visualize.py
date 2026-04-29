@@ -280,6 +280,7 @@ _SOURCE_LABELS = [
     (re.compile(r"swimbc\.ca",         re.I), "Swim BC"),
     (re.compile(r"swimalberta\.ca",    re.I), "Swim AB"),
     (re.compile(r"swimmanitoba\.mb\.ca", re.I), "Swim MB"),
+    (re.compile(r"swimmingnl\.ca",     re.I), "Swim NL"),
     (re.compile(r"swimming\.ca|findaclub\.swimming\.ca", re.I), "Swimming CA"),
 ]
 
